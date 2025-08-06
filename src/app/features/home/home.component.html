@@ -1,0 +1,29 @@
+
+<div class="slideshow-container">
+  <img 
+    *ngFor="let img of slideshowImages; let i = index" 
+    [src]="img" 
+    class="slide-img"
+    [class.active]="i === currentImageIndex"
+    alt="Slide Image"
+  />
+</div>
+<section class="features-section">
+  <div class="container">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+      <article class="feature-card" tabindex="0">
+        <h3>Expert Team</h3>
+        <p>Our experienced professionals deliver tailored solutions to fit your needs.</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <h3>Innovative Solutions</h3>
+        <p>We leverage the latest technologies to help your business thrive.</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <h3>24/7 Support</h3>
+        <p>We’re here whenever you need us, ensuring seamless operations.</p>
+      </article>
+    </div>
+  </div>
+</section>

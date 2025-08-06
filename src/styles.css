@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* Normalize all elements to avoid unexpected overflow or gaps */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set global container class */
+.container {
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Prevent horizontal scroll or layout shifts */
+body, html {
+  overflow-x: hidden;
+}
