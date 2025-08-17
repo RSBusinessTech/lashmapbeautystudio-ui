@@ -1,30 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
- slideshowImages: string[] = [
-    'assets/slideshow/slideShowImage1.png',
-    'assets/slideshow/slideShowImage2.png',
-    'assets/slideshow/slideShowImage3.png',
-    'assets/slideshow/slideShowImage4.png',
-    'assets/slideshow/slideShowImage5.png',
-    'assets/slideshow/slideShowImage6.png'
-  ];
-  currentImageIndex = 0;
-  private intervalId: any;
+export class HomeComponent implements OnInit, AfterViewInit {
+  
+  @ViewChild('heroVideo', { static: false }) heroVideo!: ElementRef<HTMLVideoElement>;
+
   constructor() { }
 
-  ngOnInit() {
-    this.intervalId = setInterval(() => {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.slideshowImages.length;
-    }, 4000); // Change image every 2 seconds
-  }
+  ngOnInit() {}
 
-  ngOnDestroy() {
-    clearInterval(this.intervalId);
+  ngAfterViewInit() {
+    const video = this.heroVideo.nativeElement;
+    video.muted = true;   // ensure muted property is set programmatically
+    video.play().catch(error => {
+      console.warn('Video play was prevented:', error);
+    });
   }
 }
