@@ -1,1 +1,5 @@
+# Redirect all HTTP requests to HTTPS
+/*  https://lashmapbeautystudio.com/:splat  301!
+
+# SPA fallback to index.html
 /*    /index.html   200
