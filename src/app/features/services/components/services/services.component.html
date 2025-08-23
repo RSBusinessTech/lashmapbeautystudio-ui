@@ -1,18 +1,8 @@
 <div class="services-section">
-  <div class="services-header">
-    <h2 class="section-title">OUR SERVICES</h2>
-
-    <!-- Search bar -->
-    <input
-      type="text"
-      placeholder="Search services..."
-      [(ngModel)]="searchTerm"
-      class="search-bar"
-    />
-  </div>
+  <h2 class="section-title">Our Services</h2>
 
   <div class="services-container">
-    <div *ngFor="let category of filteredCategories()" class="category">
+    <div class="category" *ngFor="let category of serviceCategories" [id]="formatId(category.category)">
       <h3>{{ category.category }}</h3>
 
       <div *ngFor="let service of category.services" class="service-card">

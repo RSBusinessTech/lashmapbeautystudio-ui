@@ -201,3 +201,8 @@ small {
     text-align: center;
   }
 }
+
+.category {
+  scroll-margin-top: 100px; /* adjust if your header is fixed */
+}
+

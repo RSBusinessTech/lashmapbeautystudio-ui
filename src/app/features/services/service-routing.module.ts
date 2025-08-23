@@ -7,7 +7,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)],  // Use forChild here only
   exports: [RouterModule]
 })
 export class ServicesRoutingModule {}

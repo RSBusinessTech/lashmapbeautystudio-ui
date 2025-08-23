@@ -86,7 +86,7 @@
 }
 
 .features-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin-top: 0;
   margin-bottom: 2rem;
   color: #700c0c;
@@ -313,7 +313,7 @@
 }
 
 .home-about-preview > .about-content {
-   background-color: #e9e7e0;
+  background-color: #e9e7e0;
   max-width: 900px;
   margin: 0 auto;
   border-radius: 10px;
@@ -324,7 +324,7 @@
 .home-about-preview h2 {
   color: #830707;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   animation: fadeInUp 2s ease forwards 0.5s infinite;
 }
@@ -412,6 +412,11 @@
     width: auto;
     max-height: 160px;
     align-self: center; /* ensure flex alignment center */
+  }
+
+  .home-about-preview .about-content p {
+    width: auto;
+    padding: 0rem 0rem;
   }
 }
 

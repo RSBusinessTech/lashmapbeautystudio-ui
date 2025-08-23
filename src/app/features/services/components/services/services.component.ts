@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';  // <-- import Location
 import { SERVICE_CATEGORIES, ServiceCategory } from 'src/app/data/services-data';
 
 @Component({
@@ -10,7 +11,8 @@ export class ServicesComponent {
   searchTerm: string = '';
   serviceCategories: ServiceCategory[] = SERVICE_CATEGORIES;
 
-  
+  constructor(private location: Location) {}  // <-- inject Location
+
   filteredCategories() {
     if (!this.searchTerm.trim()) {
       return this.serviceCategories;
@@ -29,6 +31,16 @@ export class ServicesComponent {
         };
       })
       .filter((category) => category.services.length > 0);
+  }  
+
+  formatId(category: string): string {
+    return category.toLowerCase().replace(/\s+/g, '-');
   }
-    
+
+  // New method to update URL fragment without reloading
+  updateUrlFragment(category: string) {
+    const fragment = this.formatId(category);
+    // Update URL fragment, preserving current path
+    this.location.go(this.location.path(false).split('#')[0] + `#${fragment}`);
+  }
 }

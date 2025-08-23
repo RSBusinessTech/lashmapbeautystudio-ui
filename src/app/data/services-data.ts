@@ -100,12 +100,12 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       ]
     },
     {
-      category: 'Lash & Brow Services',
+      category: 'Lash Brow Services',
       services: [
         {
           name: 'Lash Tint/Dye ',
           description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
-          detailedDescription:'',
+          detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           juniorPrice: '$24',
           seniorPrice: '$24',
           duration: '40 min',
