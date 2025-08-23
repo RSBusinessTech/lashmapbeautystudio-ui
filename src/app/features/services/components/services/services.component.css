@@ -206,3 +206,62 @@ small {
   scroll-margin-top: 100px; /* adjust if your header is fixed */
 }
 
+.read-link {
+  color: #a03d72;;            /* Standard hyperlink blue */
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  display: inline;           /* Ensure it behaves like a text link */
+}
+
+.read-link:hover {
+  color: #000;            /* Slightly darker on hover */
+  background: #cac5ba;
+}
+
+.go-back-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.go-back-link {
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.go-back-link:hover {
+  color: #0056b3;
+}
+
+/* -------------------------- */
+/* Call To Action Button */
+/* -------------------------- */
+.cta-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-primary {
+  background-color: #a03d72;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #746f67;
+}
+
+

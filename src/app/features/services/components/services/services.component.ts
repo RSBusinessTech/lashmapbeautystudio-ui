@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';  // <-- import Location
+import { Location } from '@angular/common';
 import { SERVICE_CATEGORIES, ServiceCategory } from 'src/app/data/services-data';
 
 @Component({
@@ -11,7 +11,10 @@ export class ServicesComponent {
   searchTerm: string = '';
   serviceCategories: ServiceCategory[] = SERVICE_CATEGORIES;
 
-  constructor(private location: Location) {}  // <-- inject Location
+  // Store expanded state for each service card (keyed by "categoryIndex-serviceIndex")
+  expandedStates: { [key: string]: boolean } = {};
+
+  constructor(private location: Location) {}
 
   filteredCategories() {
     if (!this.searchTerm.trim()) {
@@ -31,16 +34,34 @@ export class ServicesComponent {
         };
       })
       .filter((category) => category.services.length > 0);
-  }  
+  }
 
   formatId(category: string): string {
     return category.toLowerCase().replace(/\s+/g, '-');
   }
 
-  // New method to update URL fragment without reloading
-  updateUrlFragment(category: string) {
-    const fragment = this.formatId(category);
-    // Update URL fragment, preserving current path
-    this.location.go(this.location.path(false).split('#')[0] + `#${fragment}`);
+  // Toggle Read More/Show Less
+  toggleDescription(categoryIndex: number, serviceIndex: number, categoryName: string) {
+    const key = `${categoryIndex}-${serviceIndex}`;
+    this.expandedStates[key] = !this.expandedStates[key];
+
+    // Optional: update the URL fragment
+    if (this.expandedStates[key]) {
+      const fragment = this.formatId(categoryName);
+      this.location.go(this.location.path(false).split('#')[0] + `#${fragment}`);
+    }
   }
+
+  isExpanded(categoryIndex: number, serviceIndex: number): boolean {
+    return this.expandedStates[`${categoryIndex}-${serviceIndex}`] || false;
+  }
+
+    goBack(): void {
+    this.location.back();
+  }
+
+  ngOnInit() {
+  // This forces the browser URL to update without reloading the page
+  this.location.go('/services');
+}
 }

@@ -2,18 +2,34 @@
   <h2 class="section-title">Our Services</h2>
 
   <div class="services-container">
-    <div class="category" *ngFor="let category of serviceCategories" [id]="formatId(category.category)">
+    <div
+      class="category"
+      *ngFor="let category of serviceCategories; let cIndex = index"
+      [id]="formatId(category.category)"
+    >
       <h3>{{ category.category }}</h3>
 
-      <div *ngFor="let service of category.services" class="service-card">
+      <div
+        *ngFor="let service of category.services; let sIndex = index"
+        class="service-card"
+      >
         <!-- Image -->
         <img [src]="service.image" [alt]="service.name" class="service-image" />
 
         <!-- Details -->
         <div class="service-details">
           <h4>{{ service.name }}</h4>
-          <p>{{ service.description }}</p>
 
+          <!-- Show description or detailedDescription based on toggle -->
+          <p>
+            {{
+              isExpanded(cIndex, sIndex)
+                ? service.detailedDescription
+                : service.description
+            }}
+          </p>
+
+          <!-- Pricing -->
           <div class="pricing">
             <span *ngIf="service.juniorPrice">Junior {{ service.juniorPrice }}</span>
             <span *ngIf="service.seniorPrice"> | Senior {{ service.seniorPrice }}</span>
@@ -25,10 +41,22 @@
           <!-- Links -->
           <div class="links">
             <a [href]="service.bookUrl" class="book-link">Book Appointment</a>
-            <a [href]="service.readUrl" class="read-link">Read More</a>
+
+            <!-- Toggle Read More / Show Less -->
+            <button
+              (click)="toggleDescription(cIndex, sIndex, category.category)"
+              class="read-link"
+            >
+              {{ isExpanded(cIndex, sIndex) ? 'show less' : 'read more' }}
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="cta-area">
+    <a class="btn-primary" (click)="goBack()">← Go Back</a>
+  </div>
+ 
 </div>
