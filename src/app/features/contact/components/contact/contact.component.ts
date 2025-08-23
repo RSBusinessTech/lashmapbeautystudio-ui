@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../services/contact.service';
 import { ContactRequest } from '../../models/ContactRequest';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,7 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
 
   //Dependency Injection (Constrcutor DI).
-  constructor(private fb: FormBuilder, private contactService: ContactService) {
+  constructor(private fb: FormBuilder, private contactService: ContactService, private location: Location) {
     //validating the inputs fields.
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -44,6 +45,10 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+   goBack(): void {
+    this.location.back();
   }
 
 }

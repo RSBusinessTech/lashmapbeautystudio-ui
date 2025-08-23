@@ -59,9 +59,4 @@ export class ServicesComponent {
     goBack(): void {
     this.location.back();
   }
-
-  ngOnInit() {
-  // This forces the browser URL to update without reloading the page
-  this.location.go('/services');
-}
 }
