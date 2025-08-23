@@ -307,17 +307,13 @@
 }
 
 .home-about-preview {
-    /* light purple/lavender color outside the box */
-   background-color: #d6d6ca;   
-  
+  background-color: #d6d6ca;   
   padding: 4rem 1rem;          /* space around the box */
   text-align: center;
 }
 
 .home-about-preview > .about-content {
-     background-color: #e9e7e0;
-  /* background: #f3eee5; */
-  /* background: #f8f4ec; */
+   background-color: #e9e7e0;
   max-width: 900px;
   margin: 0 auto;
   border-radius: 10px;
@@ -365,7 +361,6 @@
   color:#fff;
   padding: 1rem 1.5rem;
   border-radius: 10px;
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
   max-width: 300px;
   flex: 1 1 280px;
   text-align: left;
@@ -402,19 +397,21 @@
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .owners {
+    display: flex;
     flex-direction: column;
+    align-items: center; /* center items horizontally */
     gap: 1.5rem;
-    align-items: center; /* Center the column items horizontally */ 
+  }
+  .owner h3 {
+    text-align: center;
   }
 
   .owner {
-    max-width: 100%;   /* full width */
-    width: auto;       /* allow dynamic width */
-    min-width: 280px;  /* keep a reasonable minimum */
-    padding: 1rem 2rem; /* slightly more padding for comfort */
-    text-align: center;
-    max-height: 150px;
-    box-sizing: border-box; /* include padding in width */
+    padding: 1rem 0.7rem;
+    box-sizing: border-box;
+    width: auto;
+    max-height: 160px;
+    align-self: center; /* ensure flex alignment center */
   }
 }
 
