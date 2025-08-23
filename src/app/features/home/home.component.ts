@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { SERVICE_CATEGORIES, ServiceCategory } from 'src/app/data/services-data';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,9 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 export class HomeComponent implements OnInit, AfterViewInit {
   
   @ViewChild('heroVideo', { static: false }) heroVideo!: ElementRef<HTMLVideoElement>;
+
+  serviceCategories : ServiceCategory[] = SERVICE_CATEGORIES;
+
 
   constructor() { }
 

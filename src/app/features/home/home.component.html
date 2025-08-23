@@ -11,26 +11,89 @@
   <source src="assets/videos/hero-video.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
-
-
 </div>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title">OUR SERVICES</h2>
+
+    <!-- Loop through categories -->
+    <div class="category" *ngFor="let category of serviceCategories">
+      <h3 class="category-title">{{ category.category }}</h3>
+
+      <div class="service-list">
+        <div class="service-card" *ngFor="let s of category.services">
+          <div class="service-header" (click)="s.expanded = !s.expanded">
+            <h4>{{ s.name }}</h4>
+            <span class="price" *ngIf="s.price">From {{ s.price }}</span>
+            <span class="toggle">{{ s.expanded ? '−' : '+' }}</span>
+          </div>
+
+          <!-- Expanded details -->
+          <div class="service-body" *ngIf="s.expanded">
+            <p>{{ s.detailedDescription }}</p>
+            <ul class="meta">
+              <li *ngIf="s.duration"><strong>Duration:</strong> {{ s.duration }}</li>
+
+              <!-- case: only juniorPrice (senior missing) -->
+              <li *ngIf="s.juniorPrice && !s.seniorPrice"><strong>Price:</strong> {{ s.juniorPrice }}</li>
+
+           <!-- case: both junior & senior available -->
+           <ng-container *ngIf="s.juniorPrice && s.seniorPrice">
+             <li><strong>Junior:</strong> {{ s.juniorPrice }}</li>
+             <li><strong>Senior:</strong> {{ s.seniorPrice }}</li>
+           </ng-container>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-about-preview" aria-labelledby="about-heading">
+  <div class="about-content">
+    <h2 id="about-heading">ABOUT US</h2>
+    <p>
+      We at LashMap Beauty Studio are dedicated to provide the best beauty services tailored just for you. Our experienced team ensures every visit is a pampering experience.  
+    </p>
+    <div class="owners">
+      <article class="owner" itemscope itemtype="http://schema.org/Person">
+        <h3 itemprop="name">Ah Ling</h3>
+        <p itemprop="description">
+          Co-founder and lead stylist with over 5+ years of experience in beauty and wellness.
+        </p>
+      </article>
+      <article class="owner" itemscope itemtype="http://schema.org/Person">
+        <h3 itemprop="name">Ah Seng</h3>
+        <p itemprop="description">
+          Co-founder and business strategist passionate about customer satisfaction and service excellence.
+        </p>
+      </article>
+    </div>
+    <a href="/about" class="read-more-link">click here to know more</a>
+  </div>
+</section>
+
 
 <section class="features-section">
   <div class="container">
-    <h2>Why Choose Us?</h2>
+    <h2>WHY CHOOSE US?</h2>
     <div class="features-grid">
       <article class="feature-card" tabindex="0">
-        <h3>Expert Team</h3>
-        <p>Our experienced professionals deliver tailored solutions to fit your needs.</p>
+        <h3>Skilled Beauty Experts</h3>
+        <p>Our experienced lash and brow professionals are dedicated to enhancing your natural beauty with precision and care.</p>
       </article>
       <article class="feature-card" tabindex="0">
-        <h3>Innovative Solutions</h3>
-        <p>We leverage the latest technologies to help your business thrive.</p>
+        <h3>Premium Products & Techniques</h3>
+        <p>We use high-quality products and the latest beauty techniques to ensure lasting, flawless results every time.</p>
       </article>
       <article class="feature-card" tabindex="0">
-        <h3>24/7 Support</h3>
-        <p>We’re here whenever you need us, ensuring seamless operations.</p>
+        <h3>Personalized Experience</h3>
+        <p>From consultation to final touch, we tailor every session to your unique style and preferences for a luxurious experience.</p>
       </article>
     </div>
   </div>
 </section>
+

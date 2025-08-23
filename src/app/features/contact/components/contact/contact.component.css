@@ -14,13 +14,27 @@
 
 .contact-section .container h2 {
   text-align: center;
-  color: #333;
-  font-size: 2rem;
+  color: #830707;
+  font-size: 2.5rem;
+  animation: fadeIn 5s ease-in-out 0.2s infinite; /* delay of 0.5s with frequency of 5sec */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact-section .container p {
   text-align: center;
   color: #777;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
