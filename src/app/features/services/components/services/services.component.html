@@ -1,10 +1,19 @@
 <div class="services-section">
+<div class="services-header">
   <h2 class="section-title">Our Services</h2>
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    class="search-bar"
+    placeholder="Search a service…             🔍"
+  />
+</div>
+
 
   <div class="services-container">
     <div
       class="category"
-      *ngFor="let category of serviceCategories; let cIndex = index"
+      *ngFor="let category of getFilteredCategories(); let cIndex = index"
       [id]="formatId(category.category)"
     >
       <h3>{{ category.category }}</h3>
@@ -20,7 +29,6 @@
         <div class="service-details">
           <h4>{{ service.name }}</h4>
 
-          <!-- Show description or detailedDescription based on toggle -->
           <p>
             {{
               isExpanded(cIndex, sIndex)
@@ -29,7 +37,6 @@
             }}
           </p>
 
-          <!-- Pricing -->
           <div class="pricing">
             <span *ngIf="service.juniorPrice">Junior {{ service.juniorPrice }}</span>
             <span *ngIf="service.seniorPrice"> | Senior {{ service.seniorPrice }}</span>
@@ -38,11 +45,8 @@
 
           <small>{{ service.duration }}</small>
 
-          <!-- Links -->
           <div class="links">
             <a [href]="service.bookUrl" class="book-link">Book Appointment</a>
-
-            <!-- Toggle Read More / Show Less -->
             <button
               (click)="toggleDescription(cIndex, sIndex, category.category)"
               class="read-link"
@@ -58,5 +62,4 @@
   <div class="cta-area">
     <a class="btn-primary" (click)="goBack()">← Go Back</a>
   </div>
- 
 </div>

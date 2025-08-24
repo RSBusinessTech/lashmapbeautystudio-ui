@@ -23,7 +23,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           name: 'Brow Tinting',
           description:'Enhance your brows with a natural tint that lasts up to 4 weeks on hair and a few days on skin. Smudge-proof and water-resistant.',
-          detailedDescription:'Brow Tinting is a semi-permanent treatment that enhances the color, shape, and thickness of your eyebrows by applying a gentle dye.This quick and painless procedure defines sparse or light-colored brows, giving them a fuller and more polished appearance.The tint is customized to match your skin tone and hair color for a natural-looking result.It stains both the brow hair and the skin beneath, helping to fill in gaps and create a structured look.Perfect for those who want to skip daily brow makeup or have naturally light brows.Results typically last up to 4 weeks on hair and a few days on skin, depending on your skincare routine.It is smudge-proof and water-resistant, making it ideal for an active lifestyle.Maintain your brows easily between appointments with minimal upkeep.',
+          detailedDescription:'Enhance your brows with a natural tint that lasts up to 4 weeks on hair and a few days on skin. Smudge-proof and water-resistant.',
           juniorPrice: '$24',
           seniorPrice: '$24',
           duration: '15 min',

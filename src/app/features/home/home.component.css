@@ -414,10 +414,20 @@
     align-self: center; /* ensure flex alignment center */
   }
 
-  .home-about-preview .about-content p {
-    width: auto;
-    padding: 0rem 0rem;
-  }
+.home-about-preview .about-content p.intro {
+  /* Ensure full width usage */
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Reset spacing */
+  word-spacing: normal;
+  letter-spacing: normal;
+
+  /* Other styles */
+  padding: 0;
+  margin: 0 0 1rem;
+  text-align: justify;
+ }
 }
 
 

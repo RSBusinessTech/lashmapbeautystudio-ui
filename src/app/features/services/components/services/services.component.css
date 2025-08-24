@@ -41,6 +41,25 @@
   }
 }
 
+.services-header {
+  display: flex;
+  justify-content: space-between; /* title left, search right */
+  align-items: center; /* vertically center */
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  margin: 0;
+  flex: none; /* don't stretch */
+  color: #830707;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: left;
+  animation: bounceIn 5s ease-in-out 0.2s infinite;
+}
+
 .search-bar {
   width: 250px;
   padding: 8px 12px;
@@ -49,6 +68,7 @@
   border-radius: 4px;
   margin-left: auto;
   margin-top: 1rem;
+  background-color: #FFFFFF;
 }
 
 .services-container {
@@ -263,5 +283,7 @@ small {
 .btn-primary:hover {
   background-color: #746f67;
 }
+
+
 
 

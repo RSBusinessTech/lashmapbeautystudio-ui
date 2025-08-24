@@ -16,7 +16,7 @@ export class ServicesComponent {
 
   constructor(private location: Location) {}
 
-  filteredCategories() {
+  getFilteredCategories() {
     if (!this.searchTerm.trim()) {
       return this.serviceCategories;
     }
