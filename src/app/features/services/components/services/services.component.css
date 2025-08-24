@@ -222,8 +222,16 @@ small {
   }
 }
 
+/* Apply to each scroll target—your .category divs */
 .category {
-  scroll-margin-top: 100px; /* adjust if your header is fixed */
+  /* Adjust value to match your mobile header height */
+  scroll-margin-top: 60px;
+  scroll-margin-inline-start: 60px;
+}
+
+/* Optional: Smooth scrolling across the site */
+html {
+  scroll-behavior: smooth;
 }
 
 .read-link {
