@@ -1,4 +1,5 @@
 export interface ServiceItem {
+  serviceId: number;
   name: string;
   description: string;
   detailedDescription: string;
@@ -21,6 +22,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       category: 'Eyebrow Services',
       services: [
         {
+          serviceId:1,
           name: 'Brow Tinting',
           description:'Enhance your brows with a natural tint that lasts up to 4 weeks on hair and a few days on skin. Smudge-proof and water-resistant.',
           detailedDescription:'Enhance your brows with a natural tint that lasts up to 4 weeks on hair and a few days on skin. Smudge-proof and water-resistant.',
@@ -32,6 +34,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/brow-tinting'
         },
         {
+          serviceId:2,
           name: 'Brow Sculpt',
           description: 'Includes brow mapping, precision waxing, trimming, and tweezing for a perfectly defined shape.',
           detailedDescription:'Includes brow mapping, precision waxing, trimming, and tweezing for a perfectly defined shape.',
@@ -43,6 +46,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/brow-sculpt'
         },
         {
+          serviceId:3,
           name: 'Brow Sculpt & Tint',
           description:'Combination of brow sculpting and tinting for a defined, fuller look. Tint lasts up to 4 weeks on hair.',
           detailedDescription:'Combination of brow sculpting and tinting for a defined, fuller look. Tint lasts up to 4 weeks on hair.',
@@ -54,6 +58,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/brow-sculpt-tint'
         },
         {
+          serviceId:4,
           name: 'Brow Sculpt & Dye ',
           description:'Brow sculpt and hybrid dye service, followed by cleansing the brows area, mapping precision waxing, tinting, trimming, tweezing. Eyebrows dye as henna effect that provide intense and long lasting effect, in a different colour options that are customised to suit you. Extra long-term effect lasts up to 7 days on skin and up to 7 weeks on hairs.',
           detailedDescription:'Brow sculpt and hybrid dye service, followed by cleansing the brows area, mapping precision waxing, tinting, trimming, tweezing. Eyebrows dye as henna effect that provide intense and long lasting effect, in a different colour options that are customised to suit you. Extra long-term effect lasts up to 7 days on skin and up to 7 weeks on hairs.',
@@ -65,6 +70,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/brow-sculpt-tint'
         },
         {
+          serviceId:5,
           name: 'Brow Laminate ',
           description: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           detailedDescription: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
@@ -76,6 +82,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/brow-sculpt-tint'
         },
         {
+          serviceId:6,
           name: 'Brow Lamination & Sculpt ',
           description: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
@@ -87,6 +94,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/brow-sculpt-tint'
         },
         {
+          serviceId:7,
           name: 'Brow Lamination, Sculpt and Dye',
           description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
@@ -103,6 +111,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       category: 'Lash Brow Services',
       services: [
         {
+          serviceId:8,
           name: 'Lash Tint/Dye ',
           description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
@@ -114,6 +123,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/lash-lift'
         },
         {
+          serviceId:9,
           name: 'Lash Lift',
           description:'Lash lifting solution reshapes lashes at the root for a natural curl that lasts 4–6 weeks.',
           detailedDescription:'Lash lifting solution reshapes lashes at the root for a natural curl that lasts 4–6 weeks.',
@@ -125,6 +135,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/lash-lift'
         },
         {
+          serviceId:10,
           name: 'Lash Lift & Tint',
           description:'Lift plus tint for darker, fuller-looking lashes. Results last 4–6 weeks.',
           detailedDescription:'Lift plus tint for darker, fuller-looking lashes. Results last 4–6 weeks.',
@@ -135,7 +146,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           bookUrl: '/book/lash-lift-tint',
           readUrl: '/services/lash-lift-tint'
         },
-        {
+        { 
+          serviceId:11,
           name: 'Lash Lift & Brow Laminate',
           description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
@@ -147,6 +159,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/lash-lift-tint'
         },
         {
+          serviceId:12,
           name: 'Lash Lift & Tint or dye, Brow sculp Lamination & Tint or Dye',
           description:'Lash lift using solution to the base of lashes to help restructure the hair into place. The lift lasts about 4-6 weeks, duration varies depending on your skin type. Tinting results provide dark colour look for your eyelashes.',
           detailedDescription:'Lash lift using solution to the base of lashes to help restructure the hair into place. The lift lasts about 4-6 weeks, duration varies depending on your skin type. Tinting results provide dark colour look for your eyelashes.',
@@ -163,6 +176,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       category: 'Waxing Services',
       services: [
         {
+          serviceId:13,
           name: 'Full Face Waxing',
           description: 'Includes eyebrows, lip, chin, hairline, and full face.',
           detailedDescription:'Includes eyebrows, lip, chin, hairline, and full face.',
@@ -173,6 +187,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/full-face-wax'
         },
         {
+          serviceId:14,
           name: 'Hair line waxing',
           description: 'Includes eyebrows, lip, chin, hairline, and full face.',
           detailedDescription:'Includes eyebrows, lip, chin, hairline, and full face.',
@@ -183,6 +198,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/full-face-wax'
         },
         {
+          serviceId:15,
           name: 'Top Lip Waxing',
           description: 'Quick waxing service for upper lip hair.',
           detailedDescription:'Quick waxing service for upper lip hair.',
@@ -193,6 +209,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         },
         {
+          serviceId:16,
           name: 'Chin waxing',
           description: 'Quick waxing service for chin hair.',
           detailedDescription:'Quick waxing service for chin hair.',
@@ -208,6 +225,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       category: 'Eyelash Extensions',
       services: [
         {
+          serviceId:17,
           name: 'Classic Natural Set',
           description: 'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance. We apply around 60 extensions per eye, creating perfect for everyday wear.',
           detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance. We apply around 60 extensions per eye, creating perfect for everyday wear.',
@@ -218,6 +236,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/full-face-wax'
         },
         {
+          serviceId:18,
           name: 'Classic Full Set',
           description: 'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear. We apply around 90 extensions per eye, which usually covers nearly all of your available natural lashes.',
           detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear. We apply around 90 extensions per eye, which usually covers nearly all of your available natural lashes.',
@@ -228,6 +247,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/full-face-wax'
         },
         {
+          serviceId:19,
           name: 'Glam Set',
           description: 'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes. We apply around 160 extensions per eye, creating a fuller appearance that’s thicker than a classic set, yet still softer and more natural than a full volume set.',
           detailedDescription:'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes. We apply around 160 extensions per eye, creating a fuller appearance that’s thicker than a classic set, yet still softer and more natural than a full volume set.',
@@ -238,6 +258,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         },
         {
+          serviceId:20,
           name: 'Wet Look Set',
           description: 'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style. This look is achieved by using narrow, almost closed volume fans placed along the entire lash line to mimic the appearance of wet lashes. Essentially, wet-look extensions are similar to classic lash extensions but with more lash bundles, creating a darker, thicker, and bolder finish.',
           detailedDescription:'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style. This look is achieved by using narrow, almost closed volume fans placed along the entire lash line to mimic the appearance of wet lashes. Essentially, wet-look extensions are similar to classic lash extensions but with more lash bundles, creating a darker, thicker, and bolder finish.',
@@ -248,6 +269,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         },
          {
+          serviceId:21,
           name: 'Natural Wet Look Set',
           description: 'Ideal for many eye shapes, this style works best for clients with medium to full natural lashes. Each eye is enhanced with 60 closed-volume fans for a soft, textured finish.',
           detailedDescription:'Ideal for many eye shapes, this style works best for clients with medium to full natural lashes. Each eye is enhanced with 60 closed-volume fans for a soft, textured finish.',
@@ -258,6 +280,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         },
          {
+          serviceId:22,
           name: 'Full Wet Look Set',
           description: 'Also suitable for various eye shapes, this style is perfect for clients with medium to full natural lashes. Each eye is styled with 80 closed-volume fans for a bolder, more dramatic wet-look effect.',
           detailedDescription:'Also suitable for various eye shapes, this style is perfect for clients with medium to full natural lashes. Each eye is styled with 80 closed-volume fans for a bolder, more dramatic wet-look effect.',
@@ -273,6 +296,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       category: 'Hybrid Eyelash Extensions',
       services: [
         {
+          serviceId:23,
           name: 'Russian Volume Eyelash Extensions - Natural Volume Set',
           description: 'In this set, 3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes. More noticeable than a Classic Set, yet still soft and wearable.',
           detailedDescription:'In this set,3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes. More noticeable than a Classic Set, yet still soft and wearable.',
@@ -283,6 +307,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/full-face-wax'
         },
         {
+          serviceId:24,
           name: 'Volume Set',
           description: 'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes. Bolder than both the Classic and Hybrid sets, this option adds extra lashes for a dramatic, sultry effect.',
           detailedDescription:'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes. Bolder than both the Classic and Hybrid sets, this option adds extra lashes for a dramatic, sultry effect.',
@@ -293,6 +318,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/full-face-wax'
         },
         {
+          serviceId:25,
           name: 'Russian Volume - Full Set',
           description: 'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available. Best suited for clients with naturally stronger lashes that can support the density of the fans.',
           detailedDescription:'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available. Best suited for clients with naturally stronger lashes that can support the density of the fans.',
@@ -303,6 +329,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         },
         {
+          serviceId:26,
           name: 'Wispy Lash',
           description: 'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky, and eye-catching style that stands out.',
           detailedDescription:'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky, and eye-catching style that stands out.',
@@ -313,6 +340,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         },
          {
+          serviceId:27,
           name: 'Coloured Lash extension ',
           description: 'Coloured lash extensions are a fun and creative way to make your eyes pop and express your personality.',
           detailedDescription:'Coloured lash extensions are a fun and creative way to make your eyes pop and express your personality.',
@@ -323,11 +351,12 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         },
          {
+          serviceId:28,
           name: 'Just Removal',
           description: 'Safe and gentle removal of eyelash extensions without damaging your natural lashes.',
           detailedDescription:'Safe and gentle removal of eyelash extensions without damaging your natural lashes.',
           juniorPrice: '$30- with ne $15 (15 min duration)',
-          duration: '5 min',
+          duration: '15 min',
           image: 'assets/images/staff2.png',
           bookUrl: '/book/top-lip-wax',
           readUrl: '/services/top-lip-wax'

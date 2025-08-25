@@ -46,7 +46,7 @@
           <small>{{ service.duration }}</small>
 
           <div class="links">
-            <a [href]="service.bookUrl" class="book-link">Book Appointment</a>
+            <a [routerLink]="['/booking']" [queryParams]="{ serviceId: service.serviceId }" class="book-link">Book Appointment</a>
             <button
               (click)="toggleDescription(cIndex, sIndex, category.category)"
               class="read-link"

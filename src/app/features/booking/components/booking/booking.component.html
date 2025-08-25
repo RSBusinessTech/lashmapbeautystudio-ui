@@ -1,0 +1,102 @@
+<div class="booking-page">
+  <div class="booking-container">
+    <h2>BOOK YOUR APPOINTMENT</h2>
+
+    <form (ngSubmit)="submitBooking()" #bookingForm="ngForm">
+      <label for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Name"
+        required
+        [(ngModel)]="booking.name"
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        [(ngModel)]="booking.email"
+      />
+
+      <label for="phone">Phone</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Your Phone"
+        required
+        [(ngModel)]="booking.phone"
+      />
+
+      <!-- Service Selection (Always shown, with selected option) -->
+      <label for="service">Select Service</label>
+      <select
+        id="service"
+        name="serviceId"
+        required
+        [(ngModel)]="booking.serviceId"
+      >
+        <option value="" disabled>Select a service</option>
+        <optgroup
+          *ngFor="let category of serviceCategories"
+          [label]="category.category"
+        >
+          <option
+            *ngFor="let service of category.services"
+            [value]="service.serviceId"
+          >
+           {{ service.name }} -
+            <span *ngIf="service.juniorPrice && service.seniorPrice">
+              Junior: {{ service.juniorPrice }}/ Senior: {{ service.seniorPrice }}
+             </span>
+            <span *ngIf="service.juniorPrice && !service.seniorPrice">
+             Price: {{ service.juniorPrice }}
+            </span>
+           ({{ service.duration }})
+          </option>
+        </optgroup>
+      </select>
+
+      <label for="date">Choose Date</label>
+      <input
+        type="date"
+        id="date"
+        name="date"
+        required
+        [(ngModel)]="booking.date"
+      />
+
+      <label>Choose Time Slot</label>
+      <div class="time-slots">
+        <label *ngFor="let slot of timeSlots">
+          <input
+            type="radio"
+            name="time"
+            required
+            [(ngModel)]="booking.time"
+            [value]="slot"
+          />
+          {{ slot }}
+        </label>
+      </div>
+
+      <button type="submit" [disabled]="!bookingForm.form.valid">
+        Confirm Booking
+      </button>
+    </form>
+
+    <div *ngIf="submitted" class="confirmation">
+      <h3>Thank you, {{ booking.name }}!</h3>
+      <p>
+        Your appointment is confirmed for
+        <strong>{{ booking.date }}</strong> at
+        <strong>{{ booking.time }}</strong>.
+      </p>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'about', loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule) },
   { path: 'products', loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule) },
   { path: 'services', loadChildren: () => import('./features/services/services.module').then(m => m.ServicesModule) },
+  { path: 'booking', loadChildren: () => import('./features/booking/booking.module').then(m => m.BookingModule) },
   { path: 'contact', loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule) }
 ];
 

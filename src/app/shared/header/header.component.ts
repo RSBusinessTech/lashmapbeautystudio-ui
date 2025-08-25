@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+ menuOpen = false;  // Add this to toggle mobile menu class
+
   constructor() { }
 
   ngOnInit() {
