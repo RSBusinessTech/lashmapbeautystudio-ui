@@ -253,15 +253,19 @@ body {
 }
 
 .developer-credit a {
-  color:white;
+  color: white;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .developer-credit a:hover {
   color: red;
+}
+
+.developer-credit .credit-link {
   text-decoration: underline;
 }
+
 
 
 
