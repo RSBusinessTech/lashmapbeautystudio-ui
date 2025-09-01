@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceCategory, SERVICE_CATEGORIES, ServiceItem } from 'src/app/data/services-data';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-booking',
@@ -14,19 +15,22 @@ export class BookingComponent implements OnInit {
     phone: '',
     date: '',
     time: '',
-    serviceId: ''
+    serviceId: '',
+    stylist: ''
   };
 
   submitted = false;
 
   timeSlots: string[] = [
-    '10:00 AM', '11:00 AM', '12:00 PM',
-    '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00PM'
+    '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '01:00 PM', '01:30 PM',
+    '02:00 PM', '02:30 PM', '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM', '05:00 PM', '05:30 PM',
+    '06:00 PM', '06:30 PM', '07:00 PM', '07:30 PM', '08:00 PM', '08:30 PM', '09:00 PM', '09:30 PM',
+    '10:00 PM'
   ];
 
   serviceCategories: ServiceCategory[] = SERVICE_CATEGORIES;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private location:Location) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -51,12 +55,17 @@ export class BookingComponent implements OnInit {
     const payload = {
       ...this.booking,
       service: selectedService ? selectedService.name : '',
-      duration: selectedService ? selectedService.duration : ''
+      duration: selectedService ? selectedService.duration : '',
+      stylist: this.booking.stylist  // <-- Include stylist in the payload
     };
 
     console.log('Booking Payload:', payload);
 
     // TODO: Call your API here using HttpClient
     this.submitted = true;
+  }
+
+     goBack(): void {
+    this.location.back();
   }
 }

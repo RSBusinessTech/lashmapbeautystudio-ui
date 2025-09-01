@@ -21,7 +21,8 @@
 
 .booking-container h2 {
   text-align: center;
-  color: #830707;
+  /* color: #830707; */
+  color: #7d5a3c;
   margin-bottom: 20px;
   font-size: 2.0rem;
   animation: fadeIn 5s ease-in-out 0.2s infinite; /* delay of 0.5s with frequency of 5sec */
@@ -77,7 +78,8 @@ background: #eceae5;
 
 button {
   padding: 12px;
-  background-color: #e91e63;
+  /* background-color: #e91e63; */
+  background-color: #c37f32;
   color: white;
   border: none;
   border-radius: 4px;
@@ -118,4 +120,53 @@ select {
     width: 80%;       /* Adjust width to your liking */
   }
 }
+
+
+/* -------------------------- */
+/* Call To Action Button */
+/* -------------------------- */
+/* Adjust cta-area so the red background extends all the way down */
+.cta-area {
+  background: #f9f5e3;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.btn-primary {
+  /* background-color: #a03d72; */
+  background-color: #c37f32;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #746f67;
+}
+
+body {
+  background: #f9f5e3;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 

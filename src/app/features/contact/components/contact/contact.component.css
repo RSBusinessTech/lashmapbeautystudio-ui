@@ -14,7 +14,8 @@
 
 .contact-section .container h2 {
   text-align: center;
-  color: #830707;
+  /* color: #830707; */
+  color: #7d5a3c;
   font-size: 2.0rem;
   animation: fadeIn 5s ease-in-out 0.2s infinite; /* delay of 0.5s with frequency of 5sec */
 }
@@ -107,7 +108,8 @@
 }
 
 .btn-primary {
-  background-color: #a03d72;
+  /* background-color: #a03d72; */
+  background-color: #c37f32;
   color: #fff;
   padding: 12px 28px;
   border: none;

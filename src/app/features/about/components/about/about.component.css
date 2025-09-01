@@ -17,7 +17,8 @@
 .about-heading {
   font-size: 36px;
   font-weight: bold;
-  color: #830707;
+  /* color: #830707; */
+  color: #7d5a3c;
   margin-bottom: 20px;
   margin-left: 30px;
   text-align: left;
@@ -67,7 +68,8 @@
   padding: 30px 20px; /* Reduced padding */
   display: flex;
   justify-content: center;
-  color: #830707;
+  /* color: #830707; */
+  color: #7d5a3c;
 }
 
 /* Container box */
@@ -206,7 +208,8 @@
   font-weight: bold;
   margin-bottom: 40px;
   animation: fadeIn 5s ease-in-out 0.2s infinite; /* delay of 0.5s with frequency of 5sec */
-  color: #830707;
+  /* color: #830707; */
+  color: #7d5a3c;
 }
 
 .staff-cards {
@@ -309,7 +312,8 @@
 }
 
 .btn-primary {
-  background-color: #a03d72;
+  /* background-color: #a03d72; */
+  background-color: #c37f32;
   color: #fff;
   padding: 12px 28px;
   border: none;

@@ -62,6 +62,15 @@
         </optgroup>
       </select>
 
+      <!-- New Stylist Selection -->
+    <label for="stylist">Select Stylist</label>
+    <select id="stylist" name="stylist" required [(ngModel)]="booking.stylist">
+      <option value="" disabled selected>Select a stylist</option>
+      <option value="A">Aseng</option>
+      <option value="B">Aling</option>
+      <option value="B">Anyone</option>
+   </select>
+
       <label for="date">Choose Date</label>
       <input
         type="date"
@@ -100,3 +109,14 @@
     </div>
   </div>
 </div>
+
+<!-- Go Back button outside the booking-page container -->
+<!-- Add this wrapper around the cta-area -->
+<div class="cta-wrapper">
+  <div class="cta-area">
+    <a class="btn-primary" (click)="goBack()">← Go Back</a>
+  </div>
+</div>
+
+
+

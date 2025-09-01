@@ -16,7 +16,8 @@
 .section-title {
   font-size: 2.6rem;
   font-weight: 700;
-  color: #830707;
+  /* color: #830707; */
+  color: #7d5a3c;
   margin: 0;
   flex: 1;
   text-align: center;
@@ -53,7 +54,8 @@
 .section-title {
   margin: 0;
   flex: none; /* don't stretch */
-  color: #830707;
+  /* color: #830707; */
+    color: #7d5a3c;
   font-size: 2.6rem;
   font-weight: 700;
   text-align: left;
@@ -84,7 +86,8 @@
 .category h3 {
   font-size: 2.0rem;
   margin-bottom: 1rem;
-  color: #a03d72;
+  /* color: #a03d72; */
+  color: #c37f32;
   border-bottom: 2px solid #eee;
   display: inline-block;
   padding-bottom: 4px;
@@ -169,7 +172,8 @@ small {
 }
 
 .book-link {
-  background: #a03d72;
+  /* background: #a03d72; */
+  background-color: #c37f32;
   color: #fff;
 }
 
@@ -235,7 +239,7 @@ html {
 }
 
 .read-link {
-  color: #a03d72;;            /* Standard hyperlink blue */
+  color: #c37f32;         /* Standard hyperlink blue */
   text-decoration: underline;
   background: none;
   border: none;
@@ -275,7 +279,8 @@ html {
 }
 
 .btn-primary {
-  background-color: #a03d72;
+  /* background-color: #a03d72; */
+  background-color: #c37f32;
   color: #fff;
   padding: 12px 28px;
   border: none;

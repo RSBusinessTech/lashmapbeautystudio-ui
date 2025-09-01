@@ -89,7 +89,8 @@
   font-size: 2.0rem;
   margin-top: 0;
   margin-bottom: 2rem;
-  color: #700c0c;
+  /* color: #700c0c; */
+  color: #7d5a3c;
   animation: fadeScaleUp 4s ease forwards 0.2s infinite;
 }
 
@@ -219,7 +220,8 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #830707;
+  /* color: #830707; */
+    color: #7d5a3c;
   animation: bounceIn 5s ease-in-out 0.2s infinite; /* delay of 0.5s with frequency of 5sec */
 }
 
@@ -248,7 +250,8 @@
   border-bottom: 2px solid var(--primary);
   display: inline-block;
   padding-bottom: 0.25rem;
-  color: #a03d72;
+  /* color: #a03d72; */
+  color: #c37f32;
   animation: slideInLeft 3s ease-in-out 0.5s infinite; /* delay of 0.5s with frequency of 5sec */
 }
 
@@ -322,7 +325,8 @@
 }
 
 .home-about-preview h2 {
-  color: #830707;
+  /* color: #830707; */
+    color: #7d5a3c;
   margin-bottom: 1rem;
   font-size: 2.0rem;
   font-weight: 700;
@@ -429,6 +433,81 @@
   text-align: justify;
  }
 }
+
+.special-offer-section {
+  background-color: #cac9b5; /* Strong red background */
+  padding: 4rem 1rem;
+}
+
+.special-offer-box {
+  background: #f7f2e8;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.special-offer-box .section-title {
+  color: #d67e00; /* Darker warm tone */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.special-offer-box .offer-text {
+  font-size: 1.4rem;
+  color: #6b4e00;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.special-offer-box .offer-text strong {
+  color: #d67e00;
+  font-size: 1.6rem;
+}
+
+.special-offer-box .offer-subtext {
+  font-size: 1rem;
+  color: #7f6a00;
+  font-style: italic;
+  margin-top: 0;
+}
+
+/* Pulse animation for attention */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .special-offer-section {
+    padding: 3rem 1rem;
+  }
+
+  .special-offer-box {
+    padding: 2rem 1rem;
+  }
+
+  .special-offer-box .section-title {
+    font-size: 2rem;
+  }
+
+  .special-offer-box .offer-text {
+    font-size: 1.2rem;
+  }
+}
+
 
 
 
