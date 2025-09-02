@@ -88,16 +88,15 @@
     </form>
 
     <!-- Confirmation Message -->
-    <div *ngIf="submitted" class="confirmation">
-      <h3>Thank you, {{ bookingForm.value.name }}!</h3>
-      <p>
-        Your appointment is confirmed for
-        <strong>{{ bookingForm.value.date }}</strong> at
-        <strong>{{ bookingForm.value.time }}</strong>.
-      </p>
-    </div>
-  </div>
+<div *ngIf="submittedBooking" class="confirmation">
+  <h3>Thank you, {{ submittedBooking.name }}!</h3>
+  <p>
+    Your appointment is confirmed for
+    <strong>{{ submittedBooking.date }}</strong> at
+    <strong>{{ submittedBooking.time }}</strong>.
+  </p>
 </div>
+
 
 <!-- Go Back button -->
 <div class="cta-wrapper">

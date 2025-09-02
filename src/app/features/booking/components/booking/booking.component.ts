@@ -14,6 +14,7 @@ import { BookingRequest } from '../../models/BookingRequest';
 export class BookingComponent implements OnInit {
   bookingForm: FormGroup;
   submitted = false;
+  submittedBooking: BookingRequest | null = null; // ✅ DECLARE THIS
 
   timeSlots: string[] = [
     '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '01:00 PM', '01:30 PM',
@@ -24,10 +25,13 @@ export class BookingComponent implements OnInit {
 
   serviceCategories: ServiceCategory[] = SERVICE_CATEGORIES;
 
-  //Dependency Injection (Constrcutor DI).
-  constructor(private route: ActivatedRoute, private location:Location, private fb: FormBuilder, private bookingService: BookingService) {
-    //validating the inputs fields.
-      this.bookingForm = this.fb.group({
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private fb: FormBuilder,
+    private bookingService: BookingService
+  ) {
+    this.bookingForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
@@ -38,7 +42,7 @@ export class BookingComponent implements OnInit {
     });
   }
 
- ngOnInit(): void {
+  ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const id = params['serviceId'];
       if (id) {
@@ -47,8 +51,8 @@ export class BookingComponent implements OnInit {
     });
   }
 
- getSelectedService(): ServiceItem | null {
-    const serviceId = this.bookingForm.get('serviceId') && this.bookingForm.get('serviceId').value;
+  getSelectedService(): ServiceItem | null {
+    const serviceId = this.bookingForm.get('serviceId') ? this.bookingForm.get('serviceId')!.value : null;
 
     for (let category of this.serviceCategories) {
       const found = category.services.find(service => service.serviceId == +serviceId);
@@ -57,7 +61,7 @@ export class BookingComponent implements OnInit {
     return null;
   }
 
-onSubmit(): void {
+  onSubmit(): void {
     console.log("Submit clicked");
 
     if (this.bookingForm.valid) {
@@ -66,6 +70,7 @@ onSubmit(): void {
       this.bookingService.sendEmail(bookingRequest).subscribe({
         next: (res) => {
           console.log('Booking email sent', res);
+          this.submittedBooking = { ...bookingRequest }; // ✅ Save booking details
           this.submitted = true;
           this.bookingForm.reset();
         },
