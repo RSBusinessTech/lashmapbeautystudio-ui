@@ -2,45 +2,37 @@
   <div class="booking-container">
     <h2>BOOK YOUR APPOINTMENT</h2>
 
-    <form (ngSubmit)="submitBooking()" #bookingForm="ngForm">
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+      <!-- Name -->
       <label for="name">Full Name</label>
       <input
-        type="text"
         id="name"
-        name="name"
+        type="text"
+        formControlName="name"
         placeholder="Your Name"
-        required
-        [(ngModel)]="booking.name"
       />
 
+      <!-- Email -->
       <label for="email">Email</label>
       <input
-        type="email"
         id="email"
-        name="email"
+        type="email"
+        formControlName="email"
         placeholder="Your Email"
-        required
-        [(ngModel)]="booking.email"
       />
 
+      <!-- Phone -->
       <label for="phone">Phone Number</label>
       <input
-        type="text"
         id="phone"
-        name="phone"
+        type="text"
+        formControlName="phone"
         placeholder="Your Phone Number"
-        required
-        [(ngModel)]="booking.phone"
       />
 
-      <!-- Service Selection (Always shown, with selected option) -->
-      <label for="service">Select Service</label>
-      <select
-        id="service"
-        name="serviceId"
-        required
-        [(ngModel)]="booking.serviceId"
-      >
+      <!-- Service Selection -->
+      <label for="serviceId">Select Service</label>
+      <select id="serviceId" formControlName="serviceId">
         <option value="" disabled>Select a service</option>
         <optgroup
           *ngFor="let category of serviceCategories"
@@ -50,73 +42,66 @@
             *ngFor="let service of category.services"
             [value]="service.serviceId"
           >
-           {{ service.name }} -
+            {{ service.name }} -
             <span *ngIf="service.juniorPrice && service.seniorPrice">
               Junior: {{ service.juniorPrice }}/ Senior: {{ service.seniorPrice }}
-             </span>
-            <span *ngIf="service.juniorPrice && !service.seniorPrice">
-             Price: {{ service.juniorPrice }}
             </span>
-           ({{ service.duration }})
+            <span *ngIf="service.juniorPrice && !service.seniorPrice">
+              Price: {{ service.juniorPrice }}
+            </span>
+            ({{ service.duration }})
           </option>
         </optgroup>
       </select>
 
-      <!-- New Stylist Selection -->
-    <label for="stylist">Select Stylist</label>
-    <select id="stylist" name="stylist" required [(ngModel)]="booking.stylist">
-      <option value="" disabled selected>Select a stylist</option>
-      <option value="A">Aseng</option>
-      <option value="B">Aling</option>
-      <option value="B">Anyone</option>
-   </select>
+      <!-- Stylist -->
+      <label for="stylist">Select Stylist</label>
+      <select id="stylist" formControlName="stylist">
+        <option value="" disabled>Select a stylist</option>
+        <option value="Aseng">Aseng</option>
+        <option value="Aling">Aling</option>
+        <option value="Anyone">Anyone</option>
+      </select>
 
+      <!-- Date -->
       <label for="date">Choose Date</label>
-      <input
-        type="date"
-        id="date"
-        name="date"
-        required
-        [(ngModel)]="booking.date"
-      />
+      <input id="date" type="date" formControlName="date" />
 
+      <!-- Time Slot -->
       <label>Choose Time Slot</label>
       <div class="time-slots">
         <label *ngFor="let slot of timeSlots">
           <input
             type="radio"
-            name="time"
-            required
-            [(ngModel)]="booking.time"
             [value]="slot"
+            formControlName="time"
+            name="time"
           />
           {{ slot }}
         </label>
       </div>
 
-      <button type="submit" [disabled]="!bookingForm.form.valid">
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="!bookingForm.valid">
         Confirm Booking
       </button>
     </form>
 
+    <!-- Confirmation Message -->
     <div *ngIf="submitted" class="confirmation">
-      <h3>Thank you, {{ booking.name }}!</h3>
+      <h3>Thank you, {{ bookingForm.value.name }}!</h3>
       <p>
         Your appointment is confirmed for
-        <strong>{{ booking.date }}</strong> at
-        <strong>{{ booking.time }}</strong>.
+        <strong>{{ bookingForm.value.date }}</strong> at
+        <strong>{{ bookingForm.value.time }}</strong>.
       </p>
     </div>
   </div>
 </div>
 
-<!-- Go Back button outside the booking-page container -->
-<!-- Add this wrapper around the cta-area -->
+<!-- Go Back button -->
 <div class="cta-wrapper">
   <div class="cta-area">
     <a class="btn-primary" (click)="goBack()">← Go Back</a>
   </div>
 </div>
-
-
-

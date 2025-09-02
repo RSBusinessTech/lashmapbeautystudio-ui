@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BookingComponent } from './components/booking/booking.component';
 import { BookingRoutingModule } from './booking-routing.module';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     BookingRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class BookingModule { }

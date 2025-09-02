@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceCategory, SERVICE_CATEGORIES, ServiceItem } from 'src/app/data/services-data';
 import { Location } from '@angular/common';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { BookingService } from '../../services/booking.service';
+import { BookingRequest } from '../../models/BookingRequest';
 
 @Component({
   selector: 'app-booking',
@@ -9,16 +12,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent implements OnInit {
-  booking = {
-    name: '',
-    email: '',
-    phone: '',
-    date: '',
-    time: '',
-    serviceId: '',
-    stylist: ''
-  };
-
+  bookingForm: FormGroup;
   submitted = false;
 
   timeSlots: string[] = [
@@ -30,42 +24,62 @@ export class BookingComponent implements OnInit {
 
   serviceCategories: ServiceCategory[] = SERVICE_CATEGORIES;
 
-  constructor(private route: ActivatedRoute, private location:Location) {}
+  //Dependency Injection (Constrcutor DI).
+  constructor(private route: ActivatedRoute, private location:Location, private fb: FormBuilder, private bookingService: BookingService) {
+    //validating the inputs fields.
+      this.bookingForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+      serviceId: ['', Validators.required],
+      stylist: ['', Validators.required],
+      date: ['', Validators.required],
+      time: ['', Validators.required]
+    });
+  }
 
-  ngOnInit(): void {
+ ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const id = params['serviceId'];
       if (id) {
-        this.booking.serviceId = id;
+        this.bookingForm.patchValue({ serviceId: id });
       }
     });
   }
 
-  getSelectedService(): ServiceItem | null {
+ getSelectedService(): ServiceItem | null {
+    const serviceId = this.bookingForm.get('serviceId') && this.bookingForm.get('serviceId').value;
+
     for (let category of this.serviceCategories) {
-      const found = category.services.find(service => service.serviceId == +this.booking.serviceId);
+      const found = category.services.find(service => service.serviceId == +serviceId);
       if (found) return found;
     }
     return null;
   }
 
-  submitBooking() {
-    const selectedService = this.getSelectedService();
+onSubmit(): void {
+    console.log("Submit clicked");
 
-    const payload = {
-      ...this.booking,
-      service: selectedService ? selectedService.name : '',
-      duration: selectedService ? selectedService.duration : '',
-      stylist: this.booking.stylist  // <-- Include stylist in the payload
-    };
+    if (this.bookingForm.valid) {
+      const bookingRequest: BookingRequest = this.bookingForm.value;
 
-    console.log('Booking Payload:', payload);
-
-    // TODO: Call your API here using HttpClient
-    this.submitted = true;
+      this.bookingService.sendEmail(bookingRequest).subscribe({
+        next: (res) => {
+          console.log('Booking email sent', res);
+          this.submitted = true;
+          this.bookingForm.reset();
+        },
+        error: (err) => {
+          console.error('Failed to send booking email', err);
+          alert('Failed to book appointment. Please try again later.');
+        }
+      });
+    } else {
+      alert('Please fill all required fields correctly.');
+    }
   }
 
-     goBack(): void {
+  goBack(): void {
     this.location.back();
   }
 }
