@@ -84,7 +84,6 @@
         [value]="slot"
         formControlName="time"
         name="time"
-        (change)="onFieldChange('time', $event)"
       />
       {{ slot }}
     </label>
@@ -94,3 +93,22 @@
     Confirm Booking
   </button>
 </form>
+
+    <!-- Confirmation Message -->
+<div *ngIf="submittedBooking" class="confirmation">
+  <h3>Thank you, {{ submittedBooking.name }}!</h3>
+  <p>
+    Your appointment is confirmed for
+    <strong>{{ submittedBooking.date }}</strong> at
+    <strong>{{ submittedBooking.time }}</strong>.<br>
+    Booking details are sent to your email.
+  </p>
+</div>
+
+
+<!-- Go Back button -->
+<div class="cta-wrapper">
+  <div class="cta-area">
+    <a class="btn-primary" (click)="goBack()">← Go Back</a>
+  </div>
+</div>
