@@ -72,6 +72,17 @@ export class BookingComponent implements OnInit {
   return `${service.name} - ${priceText} (${service.duration})`;
 }
 
+onFieldChange(fieldName: string, event: any): void {
+  const value = event && event.target ? event.target.value : null;
+  if (value !== null) {
+    const control = this.bookingForm.get(fieldName);
+    if (control) {
+      control.setValue(value);
+    }
+  }
+}
+
+
 
  onSubmit(): void {
   console.log("Submit clicked");
@@ -103,7 +114,4 @@ export class BookingComponent implements OnInit {
     alert('Please fill all required fields correctly.');
   }
  }
-
- 
-
 }

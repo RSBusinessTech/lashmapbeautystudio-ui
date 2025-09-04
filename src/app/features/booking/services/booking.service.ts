@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 export class BookingService {
 
   //URL of Rest-API to be called to send email for booking appointment.
-  //  private url = "https://rsbusinesstech-backend.onrender.com/booking/sendBookingEmailLashMapBeautyStudio";
-   private url = "http://127.0.0.1:8080/booking/sendBookingEmailLashMapBeautyStudio";
+   private url = "https://rsbusinesstech-backend.onrender.com/booking/sendBookingEmailLashMapBeautyStudio";
+  //  private url = "http://127.0.0.1:8080/booking/sendBookingEmailLashMapBeautyStudio";
 
   //Dependency Injection of HttpClient(Constrcutor DI).
   constructor(private httpClient: HttpClient) { }
@@ -19,7 +19,4 @@ export class BookingService {
   sendEmail(request: BookingRequest): Observable<string>{
     return this.httpClient.post(this.url, request, { responseType: 'text' });
   }
-  
-  
-
 }
