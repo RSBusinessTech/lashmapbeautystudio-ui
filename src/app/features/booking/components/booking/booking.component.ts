@@ -61,30 +61,49 @@ export class BookingComponent implements OnInit {
     return null;
   }
 
-  onSubmit(): void {
-    console.log("Submit clicked");
+  getSelectedServiceDisplay(service: ServiceItem): string {
+  let priceText = '';
 
-    if (this.bookingForm.valid) {
-      const bookingRequest: BookingRequest = this.bookingForm.value;
+  if (service.juniorPrice && service.seniorPrice) {
+    priceText = `Junior: ${service.juniorPrice} / Senior: ${service.seniorPrice}`;
+  } else if (service.juniorPrice) {
+    priceText = `Price: ${service.juniorPrice}`;
+  }
+  return `${service.name} - ${priceText} (${service.duration})`;
+}
 
-      this.bookingService.sendEmail(bookingRequest).subscribe({
-        next: (res) => {
-          console.log('Booking email sent', res);
-          this.submittedBooking = { ...bookingRequest }; // ✅ Save booking details
-          this.submitted = true;
-          this.bookingForm.reset();
-        },
-        error: (err) => {
-          console.error('Failed to send booking email', err);
-          alert('Failed to book appointment. Please try again later.');
-        }
-      });
+
+ onSubmit(): void {
+  console.log("Submit clicked");
+
+  if (this.bookingForm.valid) {
+    const bookingRequest: BookingRequest = this.bookingForm.value;
+
+    // Serivce Details:
+    const selectedService = this.getSelectedService();
+    if (selectedService) { 
+      bookingRequest.serviceName = this.getSelectedServiceDisplay(selectedService); // This is the complete text like seen in dropdown
     } else {
-      alert('Please fill all required fields correctly.');
+      bookingRequest.serviceName = ''; // fallback if not found
     }
-  }
 
-  goBack(): void {
-    this.location.back();
+    this.bookingService.sendEmail(bookingRequest).subscribe({
+      next: (res) => {
+        console.log('Booking email sent', res);
+        this.submittedBooking = { ...bookingRequest }; // Save booking details
+        this.submitted = true;
+        this.bookingForm.reset();
+      },
+      error: (err) => {
+        console.error('Failed to send booking email', err);
+        alert('Failed to book appointment. Please try again later.');
+      }
+    });
+  } else {
+    alert('Please fill all required fields correctly.');
   }
+ }
+
+ 
+
 }
