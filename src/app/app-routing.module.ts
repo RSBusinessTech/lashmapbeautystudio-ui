@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'services', loadChildren: () => import('./features/services/services.module').then(m => m.ServicesModule) },
   { path: 'booking', loadChildren: () => import('./features/booking/booking.module').then(m => m.BookingModule) },
   { path: 'specialOffer', loadChildren: () => import('./features/specialOffer/special-offer.module').then(m => m.SpecialOfferModule) },
+  { path: 'policy', loadChildren: () => import('./features/policy/policy.module').then(m => m.PolicyModule) },
   { path: 'contact', loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule) }
 ];
 

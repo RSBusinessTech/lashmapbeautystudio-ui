@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f5e3; /* deep red */
+}
+
+.policy-wrapper {
+  background-color: #f9f5e3; /* red wrapper */
+  padding: 40px 20px;
+  min-height: 10vh; /* ensure it fills screen height */
+}
+
+.policies-container {
+  background-color:#cac9b5; /* white card/panel for readability */
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.policies-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  color: #333;
+
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #7d5a3c;
+    animation: fadeIn 5s ease-in-out 0.2s infinite; /* delay of 0.5s with frequency of 5sec */
+  }
+
+  /* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  details {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden;
+
+    summary {
+      cursor: pointer;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: #cac5ba;
+      color: #fff;     
+      transition: background 0.3s;
+      background-color: #c37f32;
+
+      &:hover {
+        background: #882d60;
+        color: #fff;
+      }
+    }
+
+    .policy-content {
+      padding: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+
+      h3 {
+        color: #6c3483;
+        margin-top: 1rem;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+        list-style: disc;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.6rem;
+    }
+
+    details summary {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* -------------------------- */
+/* Call To Action Button */
+/* -------------------------- */
+/* Adjust cta-area so the red background extends all the way down */
+.cta-area {
+  background: #cac9b5;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.btn-primary {
+  /* background-color: #a03d72; */
+  background-color: #c37f32;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #746f67;
+}
+
+
