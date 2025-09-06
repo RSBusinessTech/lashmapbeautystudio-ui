@@ -11,7 +11,8 @@ body {
 }
 
 .policies-container {
-  background-color:#cac9b5; /* white card/panel for readability */
+  /* background-color:#cac9b5;  */
+  background: #cac5ba;
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
@@ -107,9 +108,9 @@ body {
 /* -------------------------- */
 /* Adjust cta-area so the red background extends all the way down */
 .cta-area {
-  background: #cac9b5;
+  background-color: #f9f5e3;
   text-align: center;
-  margin: 0;
+  margin-top: 20px;
   padding: 20px 0;
 }
 
