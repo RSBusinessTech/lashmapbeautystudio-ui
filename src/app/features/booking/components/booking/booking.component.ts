@@ -82,8 +82,6 @@ onFieldChange(fieldName: string, event: any): void {
   }
 }
 
-
-
  onSubmit(): void {
   console.log("Submit clicked");
 
@@ -114,4 +112,8 @@ onFieldChange(fieldName: string, event: any): void {
     alert('Please fill all required fields correctly.');
   }
  }
+
+   goBack(): void {
+    this.location.back();
+  }
 }
