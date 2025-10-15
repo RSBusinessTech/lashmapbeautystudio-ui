@@ -46,7 +46,8 @@
           <small>{{ service.duration }}</small>
 
           <div class="links">
-            <a [routerLink]="['/booking']" [queryParams]="{ serviceId: service.serviceId }" class="book-link">Book Appointment</a>
+            <!-- <a [routerLink]="['/booking']" [queryParams]="{ serviceId: service.serviceId }" class="book-link">Book Appointment</a> -->
+             <a href="https://www.fresha.com/a/lashmap-beauty-studio-melbourne-level-10-1-elizabeth-st-jj0y3knw" class="book-link" target="_blank" rel="noopener">Book Appointment</a>
             <button
               (click)="toggleDescription(cIndex, sIndex, category.category)"
               class="read-link"
