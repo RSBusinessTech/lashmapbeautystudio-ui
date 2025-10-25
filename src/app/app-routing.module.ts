@@ -5,6 +5,7 @@ import { HomeComponent } from './features/home/home.component';
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
+  { path: "booking", component: HomeComponent },  //Temporary: To be removed
   { path: 'about', loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule) },
   { path: 'products', loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule) },
   { path: 'services', loadChildren: () => import('./features/services/services.module').then(m => m.ServicesModule) },
