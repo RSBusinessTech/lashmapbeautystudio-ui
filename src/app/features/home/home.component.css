@@ -367,7 +367,7 @@
   padding: 1rem 1.5rem;
   border-radius: 10px;
   max-width: 300px;
-  flex: 1 1 280px;
+  flex: 1 1 290px;
   text-align: left;
 }
 
@@ -415,7 +415,7 @@
     padding: 1rem 0.7rem;
     box-sizing: border-box;
     width: auto;
-    max-height: 160px;
+    max-height: 190px;
     align-self: center; /* ensure flex alignment center */
   }
 
