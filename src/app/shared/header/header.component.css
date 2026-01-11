@@ -1,6 +1,7 @@
 .site-header {
-  background-color:   #94948b;
-  color: #fff;
+  /* background-color:   #94948b; */
+  background-color:   white;
+  /* color: #fff; */
   padding: 1rem 0;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .site-header .container .nav-links a {
-  background-color: #f9f5e3;  /* box background */
+  /* background-color: #f9f5e3;  box background */
   color: black;               /* text color */
   text-decoration: none;
   font-weight: 500;
