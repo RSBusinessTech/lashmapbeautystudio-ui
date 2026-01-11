@@ -415,7 +415,7 @@
     padding: 1rem 0.7rem;
     box-sizing: border-box;
     width: auto;
-    max-height: 190px;
+    max-height: 230px;
     align-self: center; /* ensure flex alignment center */
   }
 
