@@ -16,7 +16,7 @@ export class SpecialOfferComponent implements OnInit {
 
   bookAppointment(): void {
     // this.router.navigate(['/booking']);
-    window.location.href = 'https://www.fresha.com/a/lashmap-beauty-studio-melbourne-level-10-1-elizabeth-st-jj0y3knw';
+    window.location.href = 'https://www.instagram.com/lashmap.beautystudio?igsh=amt6YXNqODI3NGV1&utm_source=qr';
   }
 
    goBack(): void {
