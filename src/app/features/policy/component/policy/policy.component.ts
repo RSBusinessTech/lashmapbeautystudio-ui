@@ -8,11 +8,8 @@ import { Location } from '@angular/common';
 })
 export class PolicyComponent implements OnInit {
 
-  constructor(private location: Location) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-   goBack(): void {
-    this.location.back();
   }
 }

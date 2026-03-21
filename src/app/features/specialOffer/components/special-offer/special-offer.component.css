@@ -1,6 +1,7 @@
 :host {
   display: block;
-  background-color: #f9f5e3;
+  /* background-color: #f9f5e3; */
+  background-color: white;
   color: #3c3c3c;
   padding: 20px;
   box-sizing: border-box;
@@ -17,9 +18,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px;
-  background: #f7f2e8;
+  /* background: #f7f2e8; */
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
   gap: 30px;
   box-sizing: border-box;
   padding: 40px 20px 40px 20px; /* Previously 20px; more top/bottom space for control */
@@ -164,32 +166,4 @@
     margin: 0 !important;
     padding: 0 !important;
   }
-}
-
-/* Section background */
-.cta {
-  background-color: #f9f5e3;
-  padding: 30px 20px; /* Reduced padding */
-  display: flex;
-  justify-content: center;
-  color: #000;
-}
-
-.btn-primary {
-  /* background-color: #a03d72; */
-  background-color: #c37f32;
-  color: #fff;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 50px;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #746f67;
 }

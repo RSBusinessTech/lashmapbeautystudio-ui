@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   serviceCategories : ServiceCategory[] = SERVICE_CATEGORIES;
 
-
   constructor() { }
 
   ngOnInit() {}
@@ -24,4 +23,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
       console.warn('Video play was prevented:', error);
     });
   }
+
+  getFragment(category: string): string {
+  switch (category) {
+    case 'Eyebrow Services':
+      return 'eyebrow-services';
+    case 'Lash Brow Services':
+      return 'lash-brow-services';
+    case 'Waxing Services':
+      return 'waxing-services';
+    case 'Eyelash Extensions':
+      return 'eyelash-extensions';
+    case 'Hybrid Eyelash Extensions':
+      return 'hybrid-eyelash-extensions';
+    default:
+      return '';
+  }
+}
 }

@@ -60,7 +60,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:4,
           name: 'Brow Sculpt & Dye ',
-          description:'Brow sculpt and hybrid dye service, followed by cleansing the brows area, mapping precision waxing, tinting, trimming, tweezing. Eyebrows dye as henna effect that provide intense and long lasting effect, in a different colour options that are customised to suit you. Extra long-term effect lasts up to 7 days on skin and up to 7 weeks on hairs.',
+          description:'Brow sculpt and hybrid dye service, followed by cleansing the brows area, mapping precision waxing, tinting, trimming, tweezing.',
           detailedDescription:'Brow sculpt and hybrid dye service, followed by cleansing the brows area, mapping precision waxing, tinting, trimming, tweezing. Eyebrows dye as henna effect that provide intense and long lasting effect, in a different colour options that are customised to suit you. Extra long-term effect lasts up to 7 days on skin and up to 7 weeks on hairs.',
           juniorPrice: '$50',
           seniorPrice: '$60',
@@ -72,7 +72,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:5,
           name: 'Brow Laminate ',
-          description: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
+          description: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period.',
           detailedDescription: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           juniorPrice: '$69',
           seniorPrice: '$79',
@@ -84,7 +84,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:6,
           name: 'Brow Lamination & Sculpt ',
-          description: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
+          description: 'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           juniorPrice: '$79',
           seniorPrice: '$89',
@@ -96,7 +96,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:7,
           name: 'Brow Lamination, Sculpt and Dye',
-          description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
+          description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           juniorPrice: '$89',
           seniorPrice: '$99',
@@ -113,7 +113,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:8,
           name: 'Lash Tint/Dye ',
-          description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
+          description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           juniorPrice: '$24',
           seniorPrice: '$24',
@@ -149,7 +149,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         { 
           serviceId:11,
           name: 'Lash Lift & Brow Laminate',
-          description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
+          description:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time.',
           detailedDescription:'Brow lamination is basically a perm for your brows, as it gives them a set, uniform shape for an extended period of time. Instead of curls, a setting lotion helps brows hair stay brush up and lifted upward for about 4-6 weeks. If you are lucky, you can wake up with bolder, fuller brows in a beautiful shape for up to two months.',
           juniorPrice: '$149',
           seniorPrice: '$159',
@@ -161,7 +161,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:12,
           name: 'Lash Lift & Tint or dye, Brow sculp Lamination & Tint or Dye',
-          description:'Lash lift using solution to the base of lashes to help restructure the hair into place. The lift lasts about 4-6 weeks, duration varies depending on your skin type. Tinting results provide dark colour look for your eyelashes.',
+          description:'Lash lift using solution to the base of lashes to help restructure the hair into place.',
           detailedDescription:'Lash lift using solution to the base of lashes to help restructure the hair into place. The lift lasts about 4-6 weeks, duration varies depending on your skin type. Tinting results provide dark colour look for your eyelashes.',
           juniorPrice: '$169',
           seniorPrice: '$189',
@@ -227,7 +227,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:17,
           name: 'Classic Natural Set',
-          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance. We apply around 60 extensions per eye, creating perfect for everyday wear.',
+          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance.',
           detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance. We apply around 60 extensions per eye, creating perfect for everyday wear.',
           juniorPrice: '$60',
           duration: '40 min',
@@ -238,7 +238,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:18,
           name: 'Classic Full Set',
-          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear. We apply around 90 extensions per eye, which usually covers nearly all of your available natural lashes.',
+          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear.',
           detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear. We apply around 90 extensions per eye, which usually covers nearly all of your available natural lashes.',
           juniorPrice: '$20',
           duration: '10 min',
@@ -249,7 +249,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:19,
           name: 'Glam Set',
-          description: 'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes. We apply around 160 extensions per eye, creating a fuller appearance that’s thicker than a classic set, yet still softer and more natural than a full volume set.',
+          description: 'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes.',
           detailedDescription:'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes. We apply around 160 extensions per eye, creating a fuller appearance that’s thicker than a classic set, yet still softer and more natural than a full volume set.',
           juniorPrice: '$9',
           duration: '5 min',
@@ -260,7 +260,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:20,
           name: 'Wet Look Set',
-          description: 'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style. This look is achieved by using narrow, almost closed volume fans placed along the entire lash line to mimic the appearance of wet lashes. Essentially, wet-look extensions are similar to classic lash extensions but with more lash bundles, creating a darker, thicker, and bolder finish.',
+          description: 'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style.',
           detailedDescription:'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style. This look is achieved by using narrow, almost closed volume fans placed along the entire lash line to mimic the appearance of wet lashes. Essentially, wet-look extensions are similar to classic lash extensions but with more lash bundles, creating a darker, thicker, and bolder finish.',
           juniorPrice: '$9',
           duration: '5 min',
@@ -298,7 +298,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:23,
           name: 'Russian Volume Eyelash Extensions - Natural Volume Set',
-          description: 'In this set, 3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes. More noticeable than a Classic Set, yet still soft and wearable.',
+          description: 'In this set, 3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes.',
           detailedDescription:'In this set,3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes. More noticeable than a Classic Set, yet still soft and wearable.',
           juniorPrice: '$60',
           duration: '40 min',
@@ -309,7 +309,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:24,
           name: 'Volume Set',
-          description: 'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes. Bolder than both the Classic and Hybrid sets, this option adds extra lashes for a dramatic, sultry effect.',
+          description: 'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes.',
           detailedDescription:'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes. Bolder than both the Classic and Hybrid sets, this option adds extra lashes for a dramatic, sultry effect.',
           juniorPrice: '$20',
           duration: '10 min',
@@ -320,7 +320,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:25,
           name: 'Russian Volume - Full Set',
-          description: 'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available. Best suited for clients with naturally stronger lashes that can support the density of the fans.',
+          description: 'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available.',
           detailedDescription:'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available. Best suited for clients with naturally stronger lashes that can support the density of the fans.',
           juniorPrice: '$9',
           duration: '5 min',
@@ -331,7 +331,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         {
           serviceId:26,
           name: 'Wispy Lash',
-          description: 'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky, and eye-catching style that stands out.',
+          description: 'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky.',
           detailedDescription:'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky, and eye-catching style that stands out.',
           juniorPrice: '$30- refill $15 (15 min duration)',
           duration: '5 min',

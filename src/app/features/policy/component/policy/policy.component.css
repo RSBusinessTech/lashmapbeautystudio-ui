@@ -1,136 +1,90 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f9f5e3; /* deep red */
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
 }
 
 .policy-wrapper {
-  background-color: #f9f5e3; /* red wrapper */
+  /* background-color: #f9f5e3;  */
+  background-color: white;
   padding: 40px 20px;
   min-height: 10vh; /* ensure it fills screen height */
 }
 
 .policies-container {
-  /* background-color:#cac9b5;  */
-  background: #cac5ba;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* .policies-container {
+  background: #f5f2ef;
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+} */
 
-.policies-container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 1rem;
-  color: #333;
-
-  .title {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #7d5a3c;
-    animation: fadeIn 5s ease-in-out 0.2s infinite; /* delay of 0.5s with frequency of 5sec */
-  }
-
-  /* Animation Keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-  details {
-    margin-bottom: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    overflow: hidden;
-
-    summary {
-      cursor: pointer;
-      padding: 1rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      background: #cac5ba;
-      color: #fff;     
-      transition: background 0.3s;
-      background-color: #c37f32;
-
-      &:hover {
-        background: #882d60;
-        color: #fff;
-      }
-    }
-
-    .policy-content {
-      padding: 1rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
-
-      h3 {
-        color: #6c3483;
-        margin-top: 1rem;
-      }
-
-      ul {
-        padding-left: 1.5rem;
-        list-style: disc;
-
-        li {
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .title {
-      font-size: 1.6rem;
-    }
-
-    details summary {
-      font-size: 1rem;
-    }
-  }
-}
-
-/* -------------------------- */
-/* Call To Action Button */
-/* -------------------------- */
-/* Adjust cta-area so the red background extends all the way down */
-.cta-area {
-  background-color: #f9f5e3;
+.title {
   text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #000;
+   animation: slideInFadeRepeat 2s ease-in-out infinite alternate;
+}
+/* Keyframes for repeating slide + fade */
+@keyframes slideInFadeRepeat {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+.policy-card {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.policy-card h2 {
+  color: #7d5a3c;
+  margin-bottom: 15px;
+}
+
+.policy-card h3 {
+  color: #000;
   margin-top: 20px;
-  padding: 20px 0;
+  margin-bottom: 10px;
 }
 
-.btn-primary {
-  /* background-color: #a03d72; */
-  background-color: #c37f32;
-  color: #fff;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 50px;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+.policy-card ul {
+  padding-left: 20px;
+  list-style: disc;
 }
 
-.btn-primary:hover {
-  background-color: #746f67;
+.policy-card ul li {
+  margin-bottom: 8px;
 }
 
+.policy-card p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}

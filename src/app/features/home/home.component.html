@@ -13,57 +13,66 @@
 </video>
 </div>
 
-<section class="services" id="services">
-  <div class="container">
-    <h2 class="section-title">OUR SERVICES</h2>
+<!-- <section class="specsial-offer-section" aria-labelledby="special-offer-heading"> -->
+<section aria-labelledby="special-offer-heading">
+  <div class="container special-offer-box">
 
-    <!-- Loop through categories -->
-    <div class="category" *ngFor="let category of serviceCategories">
-      <h3 class="category-title">{{ category.category }}</h3>
-
-      <div class="service-list">
-        <div class="service-card" *ngFor="let s of category.services">
-          <div class="service-header" (click)="s.expanded = !s.expanded">
-            <h4>{{ s.name }}</h4>
-            <span class="price" *ngIf="s.price">From {{ s.price }}</span>
-            <span class="toggle">{{ s.expanded ? '−' : '+' }}</span>
-          </div>
-
-          <!-- Expanded details -->
-          <div class="service-body" *ngIf="s.expanded">
-            <p>{{ s.detailedDescription }}</p>
-            <ul class="meta">
-              <li *ngIf="s.duration"><strong>Duration:</strong> {{ s.duration }}</li>
-
-              <!-- case: only juniorPrice (senior missing) -->
-              <li *ngIf="s.juniorPrice && !s.seniorPrice"><strong>Price:</strong> {{ s.juniorPrice }}</li>
-
-           <!-- case: both junior & senior available -->
-           <ng-container *ngIf="s.juniorPrice && s.seniorPrice">
-             <li><strong>Junior:</strong> {{ s.juniorPrice }}</li>
-             <li><strong>Senior:</strong> {{ s.seniorPrice }}</li>
-           </ng-container>
-
-            </ul>
-          </div>
-        </div>
+    <div class="offer-flex">
+      
+      <!-- LEFT: TEXT -->
+      <div class="offer-text-content">
+        <h2 id="special-offer-heading" class="section-title">SPECIAL OFFER</h2>
+        <p class="offer-text">
+          New customers get <strong>20% OFF</strong> on their first visit! Experience our premium beauty services at a discounted rate.
+        </p>
+        <p class="offer-subtext">
+          Book your appointment now and treat yourself to an amazing beauty experience.
+        </p>
       </div>
+
+      <!-- RIGHT: IMAGE -->
+      <div class="offer-image">
+        <img src="assets/images/specialOffer.png" alt="Special Offer Image" />
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="special-offer-section" aria-labelledby="special-offer-heading">
-  <div class="container special-offer-box">
-    <h2 id="special-offer-heading" class="section-title">SPECIAL OFFER</h2>
-    <p class="offer-text">
-      New customers get <strong>20% OFF</strong> on their first visit! Experience our premium beauty services at a discounted rate.
-    </p>
-    <p class="offer-subtext">
-      Book your appointment now and treat yourself to an amazing beauty experience.
-    </p>
+<section class="services-preview" id="services">
+  <div class="container">
+    <h2 class="section-title">OUR SERVICES</h2>
+
+    <div class="services-grid">
+      <div class="service-category-card"
+           *ngFor="let category of serviceCategories">
+
+        <!-- Image -->
+        <div class="category-image">
+          <img [src]="category.services[0]?.image" alt="{{category.category}}" />
+        </div>
+
+        <!-- Content -->
+        <div class="category-content">
+          <h3>{{ category.category }}</h3>
+
+          <!-- Short dynamic description -->
+          <p>
+            {{ category.services[0]?.description | slice:0:100 }}...
+          </p>
+          <a 
+          [routerLink]="['/services']"
+          [fragment]="getFragment(category.category)"
+          class="btn-service"
+          >
+         View Services
+         </a>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
-
 
 <section class="home-about-preview" aria-labelledby="about-heading">
   <div class="about-content">
@@ -73,25 +82,82 @@
     </p>
     <div class="owners">
       <article class="owner" itemscope itemtype="http://schema.org/Person">
+        <img src="assets/images/specialOffer.png" alt="Jo – Senior Lash Technician" class="staff-photo" />
         <h3 itemprop="name">Jo – Senior Lash Technician</h3>
         <p itemprop="description">
           Jo is a friendly and experienced lash technician with over 7 years of experience in the beauty industry.
         </p>
       </article>
       <article class="owner" itemscope itemtype="http://schema.org/Person">
+        <img src="assets/images/specialOffer.png" alt="Ling – Senior Lash & Nail Technician" class="staff-photo" />
         <h3 itemprop="name">Ling – Senior Lash & Nail Technician</h3>
         <p itemprop="description">
           Ling is a talented lash and nail technician with over 9 years of experience, including 7 years in Malaysia and 2 years in Melbourne.
         </p>
       </article>
       <article class="owner" itemscope itemtype="http://schema.org/Person">
+        <img src="assets/images/specialOffer.png" alt="Amie – Senior Lash & Brow Specialist" class="staff-photo" />
         <h3 itemprop="name">Amie – Senior Lash & Brow Specialist</h3>
         <p itemprop="description">
           Meet Amie! With 4 years of experience in the lash and brow industry, she loves helping clients feel confident and refreshed.
         </p>
       </article>
     </div>
-    <a href="/about" class="read-more-link">click here to know more</a>
+    <a href="/about" class="read-more-link">Read more </a>&nbsp;➜
+  </div>
+</section>
+
+<section class="policies-preview">
+  <div class="container">
+
+    <h2 class="section-title">OUR POLICIES</h2>
+
+    <div class="policies-grid">
+
+      <!-- Booking Policy -->
+      <div class="policy-card">
+        <h3>Booking Policy</h3>
+        <p>
+          A 30% deposit is required to secure your appointment. 
+          Please provide at least 24 hours notice for cancellations or rescheduling to avoid losing your deposit.
+        </p>
+      </div>
+
+      <!-- Late & No-show -->
+      <div class="policy-card">
+        <h3>Late & No-Show</h3>
+        <p>
+          Arriving more than 15 minutes late may result in cancellation and loss of deposit. 
+          Please arrive on time to ensure full service.
+        </p>
+      </div>
+
+      <!-- Eyelash Policy -->
+      <div class="policy-card">
+        <h3>Eyelash Extensions</h3>
+        <p>
+          Refills are recommended every 2 weeks. 
+          Less than 20% lash retention may require a full new set.
+        </p>
+      </div>
+
+      <!-- Guarantee -->
+      <div class="policy-card">
+        <h3>Service Guarantee</h3>
+        <p>
+          If you experience issues within 3 days, we offer a free fix. 
+          Your satisfaction is our priority.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="policy-cta">
+      <a routerLink="/policy" class="read-more-link">
+        Read Full Policies
+      </a>&nbsp;➝
+    </div> 
   </div>
 </section>
 
