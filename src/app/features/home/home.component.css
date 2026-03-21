@@ -329,7 +329,7 @@
   color: #000;
     /* color: #7d5a3c; */
   margin-bottom: 1rem;
-  font-size: 3.0rem;
+  font-size: 2.5rem;
   font-weight: 700;
   animation: slideInFadeRepeat 2s ease-in-out infinite alternate;
 }
@@ -562,9 +562,9 @@
 
 /* Staff photo - centered and responsive */
 .owner .staff-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  /* border-radius: 50%; */
   object-fit: cover; /* maintain aspect ratio */
   margin: 0 auto 15px; /* center horizontally and space below */
   border: 3px solid #f9f5e3;
@@ -573,26 +573,26 @@
 
 /* Mobile tweaks for staff cards */
 @media (max-width: 768px) {
-  .owners {
+.owners {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
   }
 
   .owner {
-    width: 90%;
-    max-width: 280px;
-    padding: 2rem 1rem;   /* increased padding for more height */
-    min-height: 320px;    /* ensure taller box */
+    width: 100%;          /* increase width */
+    /* max-width: auto;     remove restriction */
+    padding: 2rem 1.2rem;
+    /* min-height: 330px;    let height grow naturally */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    min-height: 360px;
   }
 
   .owner .staff-photo {
-    width: 110px;
-    height: 110px;
+    width: 160px;
+    height: 160px;
     margin-bottom: 20px;
   }
 
