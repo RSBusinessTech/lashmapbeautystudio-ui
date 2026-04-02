@@ -84,7 +84,7 @@
   /* background: #cac5ba; */
   background: white;
   /* box-shadow: 0 4px 12px rgba(0,0,0,0.08); */
-  padding: 40px 30px;
+  padding: 0px 0px;  /*To be removed when added staff section and use padding: 40px 30px;*/
   border-radius: 12px;
   max-width: 800px;
   width: 100%;

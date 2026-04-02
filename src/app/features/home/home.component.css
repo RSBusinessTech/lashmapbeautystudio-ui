@@ -446,7 +446,8 @@
   /* Other styles */
   padding: 0;
   margin: 0 0 1rem;
-  text-align: justify;
+   text-align: left;   /* ✅ remove big gaps */
+  /* text-align: justify; */
  }
 }
 
