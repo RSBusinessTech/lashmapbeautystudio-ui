@@ -374,5 +374,32 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           readUrl: '/services/top-lip-wax'
         }
       ]
+    },
+     {
+      category: 'Nail Services',
+      services: [
+        {
+          serviceId:56,
+          name: 'E-File Gel Manicure',
+          description: 'Professional gel manicure using an electric file for precise cuticle care and smooth nail preparation, finished with long-lasting gel polish.',
+          detailedDescription:'This advanced gel manicure uses an e-file (electric nail drill) to gently and precisely clean the cuticles, remove dead skin, and shape the nails for a flawless finish. The process ensures better adhesion of gel polish, resulting in a smoother, longer-lasting manicure. Includes nail shaping, cuticle work, gel polish application, and a high-gloss or matte finish. Ideal for clients looking for a clean, durable, and salon-perfect look.',
+          juniorPrice: '$60',
+          duration: '40 min',
+          image: 'assets/images/serviceId56.jpeg',
+          bookUrl: '/book/full-face-wax',
+          readUrl: '/services/full-face-wax'
+        },
+        {
+          serviceId:57,
+          name: 'Gel French Manicure',
+          description: 'Classic French manicure enhanced with gel polish for a clean, elegant, and long-lasting finish.',
+          detailedDescription:'A timeless French manicure using high-quality gel polish to create a natural pink or nude base with crisp white tips. This service includes nail shaping, cuticle care, and precise application for a neat, sophisticated look. The gel formula provides extended wear, chip resistance, and a glossy finish that lasts for weeks. Perfect for those who prefer a classy and polished style suitable for any occasion.',
+          juniorPrice: '$20',
+          duration: '10 min',
+          image: 'assets/images/serviceId57.jpeg',
+          bookUrl: '/book/full-face-wax',
+          readUrl: '/services/full-face-wax'
+        }
+      ]
     }
   ];
