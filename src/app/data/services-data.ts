@@ -43,6 +43,16 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           bookUrl: '/book/full-face-wax',
           readUrl: '/services/full-face-wax'
         },
+          {
+          serviceId:181,
+          name: 'Classic Perfect Set',
+          description: 'Classic Perfect Set eyelash extensions enhance your natural lashes with a fuller, more polished look while maintaining soft elegance — perfect for clients who want noticeable yet natural beauty.',
+          detailedDescription: 'Classic Perfect Set eyelash extensions are applied using a one-to-one technique, attaching one extension to each healthy natural lash. This set provides balanced fullness, improved definition, and a refined everyday glam appearance. We apply approximately 100–120 extensions per eye to achieve a complete, symmetrical, and perfectly blended lash look.',
+          duration: '10 min',
+          image: 'assets/images/serviceId181.jpeg',
+          bookUrl: '/book/full-face-wax',
+          readUrl: '/services/full-face-wax'
+        },
         {
           serviceId:19,
           name: 'Glam Set',
@@ -94,7 +104,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           detailedDescription:'In this set,3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes. More noticeable than a Classic Set, yet still soft and wearable.',
           juniorPrice: '$60',
           duration: '40 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
+          image: 'assets/images/serviceId23.jpeg',
           bookUrl: '/book/full-face-wax',
           readUrl: '/services/full-face-wax'
         },
@@ -105,7 +115,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           detailedDescription:'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available. Best suited for clients with naturally stronger lashes that can support the density of the fans.',
           juniorPrice: '$9',
           duration: '5 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
+          image: 'assets/images/serviceId24.jpeg',
           bookUrl: '/book/top-lip-wax',
           readUrl: '/services/top-lip-wax'
         },
@@ -116,7 +126,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           detailedDescription:'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes. Bolder than both the Classic and Hybrid sets, this option adds extra lashes for a dramatic, sultry effect.',
           juniorPrice: '$20',
           duration: '10 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
+          image: 'assets/images/serviceId25.jpeg',
           bookUrl: '/book/full-face-wax',
           readUrl: '/services/full-face-wax'
         },
@@ -128,7 +138,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           detailedDescription:'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky, and eye-catching style that stands out.',
           juniorPrice: '$30- refill $15 (15 min duration)',
           duration: '5 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
+          image: 'assets/images/serviceId26.jpeg',
           bookUrl: '/book/top-lip-wax',
           readUrl: '/services/top-lip-wax'
         },
@@ -185,7 +195,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$25',
           seniorPrice: '$29',
           duration: '20 min',
-          image: 'assets/images/eyebrowServices.png',
+          image: 'assets/images/serviceId2.jpeg',
           bookUrl: '/book/brow-sculpt',
           readUrl: '/services/brow-sculpt'
         },
@@ -197,7 +207,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$40',
           seniorPrice: '$50',
           duration: '30 min',
-          image: 'assets/images/eyebrowServices.png',
+          image: 'assets/images/serviceId2.jpeg',
           bookUrl: '/book/brow-sculpt-tint',
           readUrl: '/services/brow-sculpt-tint'
         },
@@ -209,7 +219,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$50',
           seniorPrice: '$60',
           duration: '40 min',
-          image: 'assets/images/eyebrowServices.png',
+          image: 'assets/images/serviceId4.jpeg',
           bookUrl: '/book/brow-sculpt-tint',
           readUrl: '/services/brow-sculpt-tint'
         },
@@ -221,7 +231,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$69',
           seniorPrice: '$79',
           duration: '35 min',
-          image: 'assets/images/eyebrowServices.png',
+          image: 'assets/images/serviceId2.jpeg',
           bookUrl: '/book/brow-sculpt-tint',
           readUrl: '/services/brow-sculpt-tint'
         },
@@ -233,7 +243,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$79',
           seniorPrice: '$89',
           duration: '50 min',
-          image: 'assets/images/eyebrowServices.png',
+          image: 'assets/images/serviceId2.jpeg',
           bookUrl: '/book/brow-sculpt-tint',
           readUrl: '/services/brow-sculpt-tint'
         },
@@ -245,7 +255,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$89',
           seniorPrice: '$99',
           duration: '1 hour',
-          image: 'assets/images/eyebrowServices.png',
+          image: 'assets/images/serviceId4.jpeg',
           bookUrl: '/book/brow-sculpt-tint',
           readUrl: '/services/brow-sculpt-tint'
         }
@@ -286,7 +296,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$99',
           seniorPrice: '$109',
           duration: '1 hour',
-          image: 'assets/images/lashbrowServices.png',
+          image: 'assets/images/serviceId4.jpeg',
           bookUrl: '/book/lash-lift-tint',
           readUrl: '/services/lash-lift-tint'
         },
@@ -298,7 +308,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$149',
           seniorPrice: '$159',
           duration: '1 hour',
-          image: 'assets/images/lashbrowServices.png',
+          image: 'assets/images/serviceId4.jpeg',
           bookUrl: '/book/lash-lift-tint',
           readUrl: '/services/lash-lift-tint'
         },
@@ -310,7 +320,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$169',
           seniorPrice: '$189',
           duration: '1 hour 15 min',
-          image: 'assets/images/lashbrowServices.png',
+          image: 'assets/images/serviceId4.jpeg',
           bookUrl: '/book/lash-lift-tint',
           readUrl: '/services/lash-lift-tint'
         }
@@ -326,7 +336,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           detailedDescription:'Includes eyebrows, lip, chin, hairline, and full face.',
           juniorPrice: '$60',
           duration: '40 min',
-          image: 'assets/images/waxingServices.png',
+          image: 'assets/images/serviceId13.jpeg',
           bookUrl: '/book/full-face-wax',
           readUrl: '/services/full-face-wax'
         },
@@ -337,7 +347,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           detailedDescription:'Includes eyebrows, lip, chin, hairline, and full face.',
           juniorPrice: '$20',
           duration: '10 min',
-          image: 'assets/images/waxingServices.png',
+          image: 'assets/images/serviceId14.jpeg',
           bookUrl: '/book/full-face-wax',
           readUrl: '/services/full-face-wax'
         },
@@ -348,7 +358,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           detailedDescription:'Quick waxing service for upper lip hair.',
           juniorPrice: '$9',
           duration: '5 min',
-          image: 'assets/images/waxingServices.png',
+          image: 'assets/images/serviceId15.jpeg',
           bookUrl: '/book/top-lip-wax',
           readUrl: '/services/top-lip-wax'
         },
