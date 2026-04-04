@@ -18,6 +18,150 @@ export interface ServiceCategory {
 }
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
+   {
+      category: 'Eyelash Extensions',
+      services: [
+        {
+          serviceId:17,
+          name: 'Classic Natural Set',
+          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance.',
+          detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance. We apply around 60 extensions per eye, creating perfect for everyday wear.',
+          juniorPrice: '$60',
+          duration: '40 min',
+          image: 'assets/images/serviceId17.jpeg',
+          bookUrl: '/book/full-face-wax',
+          readUrl: '/services/full-face-wax'
+        },
+        {
+          serviceId:18,
+          name: 'Classic Full Set',
+          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear.',
+          detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear. We apply around 90 extensions per eye, which usually covers nearly all of your available natural lashes.',
+          juniorPrice: '$20',
+          duration: '10 min',
+          image: 'assets/images/serviceId18.jpeg',
+          bookUrl: '/book/full-face-wax',
+          readUrl: '/services/full-face-wax'
+        },
+        {
+          serviceId:19,
+          name: 'Glam Set',
+          description: 'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes.',
+          detailedDescription:'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes. We apply around 160 extensions per eye, creating a fuller appearance that’s thicker than a classic set, yet still softer and more natural than a full volume set.',
+          juniorPrice: '$9',
+          duration: '5 min',
+          image: 'assets/images/serviceId19.jpeg',
+          bookUrl: '/book/top-lip-wax',
+          readUrl: '/services/top-lip-wax'
+        },
+        // {
+        //   serviceId:20,
+        //   name: 'Wet Look Set',
+        //   description: 'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style.',
+        //   detailedDescription:'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style. This look is achieved by using narrow, almost closed volume fans placed along the entire lash line to mimic the appearance of wet lashes. Essentially, wet-look extensions are similar to classic lash extensions but with more lash bundles, creating a darker, thicker, and bolder finish.',
+        //   juniorPrice: '$9',
+        //   duration: '5 min',
+        //   image: 'assets/images/eyelashextensionServices.png',
+        //   bookUrl: '/book/top-lip-wax',
+        //   readUrl: '/services/top-lip-wax'
+        // },
+         {
+          serviceId:21,
+          name: 'Natural Wet Look Set',
+          description: 'Ideal for many eye shapes, this style works best for clients with medium to full natural lashes. Each eye is enhanced with 60 closed-volume fans for a soft, textured finish.',
+          detailedDescription:'Ideal for many eye shapes, this style works best for clients with medium to full natural lashes. Each eye is enhanced with 60 closed-volume fans for a soft, textured finish.',
+          juniorPrice: '$9',
+          duration: '5 min',
+          image: 'assets/images/serviceId21.jpeg',
+          bookUrl: '/book/top-lip-wax',
+          readUrl: '/services/top-lip-wax'
+        },
+         {
+          serviceId:22,
+          name: 'Full Wet Look Set',
+          description: 'Also suitable for various eye shapes, this style is perfect for clients with medium to full natural lashes. Each eye is styled with 80 closed-volume fans for a bolder, more dramatic wet-look effect.',
+          detailedDescription:'Also suitable for various eye shapes, this style is perfect for clients with medium to full natural lashes. Each eye is styled with 80 closed-volume fans for a bolder, more dramatic wet-look effect.',
+          juniorPrice: '$9',
+          duration: '5 min',
+          image: 'assets/images/serviceId22.jpeg',
+          bookUrl: '/book/top-lip-wax',
+          readUrl: '/services/top-lip-wax'
+        },
+        {
+          serviceId:23,
+          name: 'Natural Volume Set',
+          description: 'In this set, 3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes.',
+          detailedDescription:'In this set,3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes. More noticeable than a Classic Set, yet still soft and wearable.',
+          juniorPrice: '$60',
+          duration: '40 min',
+          image: 'assets/images/hybrideyelashextensionServices.png',
+          bookUrl: '/book/full-face-wax',
+          readUrl: '/services/full-face-wax'
+        },
+        {
+          serviceId:25,
+          name: 'Russian Volume Set',
+          description: 'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available.',
+          detailedDescription:'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available. Best suited for clients with naturally stronger lashes that can support the density of the fans.',
+          juniorPrice: '$9',
+          duration: '5 min',
+          image: 'assets/images/hybrideyelashextensionServices.png',
+          bookUrl: '/book/top-lip-wax',
+          readUrl: '/services/top-lip-wax'
+        },
+        {
+          serviceId:24,
+          name: 'Full Volume Set',
+          description: 'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes.',
+          detailedDescription:'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes. Bolder than both the Classic and Hybrid sets, this option adds extra lashes for a dramatic, sultry effect.',
+          juniorPrice: '$20',
+          duration: '10 min',
+          image: 'assets/images/hybrideyelashextensionServices.png',
+          bookUrl: '/book/full-face-wax',
+          readUrl: '/services/full-face-wax'
+        },
+
+        {
+          serviceId:26,
+          name: 'Wispy Lash',
+          description: 'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky.',
+          detailedDescription:'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky, and eye-catching style that stands out.',
+          juniorPrice: '$30- refill $15 (15 min duration)',
+          duration: '5 min',
+          image: 'assets/images/hybrideyelashextensionServices.png',
+          bookUrl: '/book/top-lip-wax',
+          readUrl: '/services/top-lip-wax'
+        },
+         {
+          serviceId:27,
+          name: 'Coloured Lash extension ',
+          description: 'Coloured lash extensions are a fun and creative way to make your eyes pop and express your personality.',
+          detailedDescription:'Coloured lash extensions are a fun and creative way to make your eyes pop and express your personality.',
+          juniorPrice: '$30- refill $15 (15 min duration)',
+          duration: '5 min',
+          image: 'assets/images/hybrideyelashextensionServices.png',
+          bookUrl: '/book/top-lip-wax',
+          readUrl: '/services/top-lip-wax'
+        },
+        //  {
+        //   serviceId:28,
+        //   name: 'Just Removal',
+        //   description: 'Safe and gentle removal of eyelash extensions without damaging your natural lashes.',
+        //   detailedDescription:'Safe and gentle removal of eyelash extensions without damaging your natural lashes.',
+        //   juniorPrice: '$30- with ne $15 (15 min duration)',
+        //   duration: '15 min',
+        //   image: 'assets/images/hybrideyelashextensionServices.png',
+        //   bookUrl: '/book/top-lip-wax',
+        //   readUrl: '/services/top-lip-wax'
+        // }
+      ]
+    },
+    // {
+    //   category: 'Hybrid Eyelash Extensions',
+    //   services: [
+        
+    //   ]
+    // },
     {
       category: 'Eyebrow Services',
       services: [
@@ -130,7 +274,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$89',
           seniorPrice: '$99',
           duration: '40 min',
-          image: 'assets/images/lashbrowServices.png',
+          image: 'assets/images/serviceId9.jpeg',
           bookUrl: '/book/lash-lift',
           readUrl: '/services/lash-lift'
         },
@@ -216,148 +360,6 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           juniorPrice: '$9',
           duration: '5 min',
           image: 'assets/images/waxingServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        }
-      ]
-    },
-    {
-      category: 'Eyelash Extensions',
-      services: [
-        {
-          serviceId:17,
-          name: 'Classic Natural Set',
-          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance.',
-          detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving you the most natural appearance. We apply around 60 extensions per eye, creating perfect for everyday wear.',
-          juniorPrice: '$60',
-          duration: '40 min',
-          image: 'assets/images/eyelashextensionServices.png',
-          bookUrl: '/book/full-face-wax',
-          readUrl: '/services/full-face-wax'
-        },
-        {
-          serviceId:18,
-          name: 'Classic Full Set',
-          description: 'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear.',
-          detailedDescription:'Classic eyelash extensions are applied one extension to one natural lash, giving a soft, natural look perfect for everyday wear. We apply around 90 extensions per eye, which usually covers nearly all of your available natural lashes.',
-          juniorPrice: '$20',
-          duration: '10 min',
-          image: 'assets/images/eyelashextensionServices.png',
-          bookUrl: '/book/full-face-wax',
-          readUrl: '/services/full-face-wax'
-        },
-        {
-          serviceId:19,
-          name: 'Glam Set',
-          description: 'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes.',
-          detailedDescription:'Eyelash extensions in the 2D style involve applying two lightweight extensions to each natural lash. This set offers a more defined look than classic lashes. We apply around 160 extensions per eye, creating a fuller appearance that’s thicker than a classic set, yet still softer and more natural than a full volume set.',
-          juniorPrice: '$9',
-          duration: '5 min',
-          image: 'assets/images/eyelashextensionServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        },
-        {
-          serviceId:20,
-          name: 'Wet Look Set',
-          description: 'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style.',
-          detailedDescription:'The Wet Set, a popular trend in 2024, is perfect for adding texture and a spiky effect, making it ideal for clients who love the ‘Kim K’ style. This look is achieved by using narrow, almost closed volume fans placed along the entire lash line to mimic the appearance of wet lashes. Essentially, wet-look extensions are similar to classic lash extensions but with more lash bundles, creating a darker, thicker, and bolder finish.',
-          juniorPrice: '$9',
-          duration: '5 min',
-          image: 'assets/images/eyelashextensionServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        },
-         {
-          serviceId:21,
-          name: 'Natural Wet Look Set',
-          description: 'Ideal for many eye shapes, this style works best for clients with medium to full natural lashes. Each eye is enhanced with 60 closed-volume fans for a soft, textured finish.',
-          detailedDescription:'Ideal for many eye shapes, this style works best for clients with medium to full natural lashes. Each eye is enhanced with 60 closed-volume fans for a soft, textured finish.',
-          juniorPrice: '$9',
-          duration: '5 min',
-          image: 'assets/images/eyelashextensionServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        },
-         {
-          serviceId:22,
-          name: 'Full Wet Look Set',
-          description: 'Also suitable for various eye shapes, this style is perfect for clients with medium to full natural lashes. Each eye is styled with 80 closed-volume fans for a bolder, more dramatic wet-look effect.',
-          detailedDescription:'Also suitable for various eye shapes, this style is perfect for clients with medium to full natural lashes. Each eye is styled with 80 closed-volume fans for a bolder, more dramatic wet-look effect.',
-          juniorPrice: '$9',
-          duration: '5 min',
-          image: 'assets/images/eyelashextensionServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        }
-      ]
-    },
-       {
-      category: 'Hybrid Eyelash Extensions',
-      services: [
-        {
-          serviceId:23,
-          name: 'Russian Volume Eyelash Extensions - Natural Volume Set',
-          description: 'In this set, 3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes.',
-          detailedDescription:'In this set,3D or 4D volume fans are applied to each natural lash (around 60–65 fans per eye), creating a light and natural volume look with minimal weight on your natural lashes. More noticeable than a Classic Set, yet still soft and wearable.',
-          juniorPrice: '$60',
-          duration: '40 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
-          bookUrl: '/book/full-face-wax',
-          readUrl: '/services/full-face-wax'
-        },
-        {
-          serviceId:24,
-          name: 'Volume Set',
-          description: 'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes.',
-          detailedDescription:'Using 3–4D fans per natural lash, this style delivers a fuller, more glamorous look while keeping the weight light on your natural lashes. Bolder than both the Classic and Hybrid sets, this option adds extra lashes for a dramatic, sultry effect.',
-          juniorPrice: '$20',
-          duration: '10 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
-          bookUrl: '/book/full-face-wax',
-          readUrl: '/services/full-face-wax'
-        },
-        {
-          serviceId:25,
-          name: 'Russian Volume - Full Set',
-          description: 'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available.',
-          detailedDescription:'For maximum impact, 5–10D fans are applied to each natural lash, creating the thickest, fullest lash style available. Best suited for clients with naturally stronger lashes that can support the density of the fans.',
-          juniorPrice: '$9',
-          duration: '5 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        },
-        {
-          serviceId:26,
-          name: 'Wispy Lash',
-          description: 'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky.',
-          detailedDescription:'A creative twist on classic or volume lashes, this advanced technique delivers the famous “Kim K” effect – a textured, spiky, and eye-catching style that stands out.',
-          juniorPrice: '$30- refill $15 (15 min duration)',
-          duration: '5 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        },
-         {
-          serviceId:27,
-          name: 'Coloured Lash extension ',
-          description: 'Coloured lash extensions are a fun and creative way to make your eyes pop and express your personality.',
-          detailedDescription:'Coloured lash extensions are a fun and creative way to make your eyes pop and express your personality.',
-          juniorPrice: '$30- refill $15 (15 min duration)',
-          duration: '5 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
-          bookUrl: '/book/top-lip-wax',
-          readUrl: '/services/top-lip-wax'
-        },
-         {
-          serviceId:28,
-          name: 'Just Removal',
-          description: 'Safe and gentle removal of eyelash extensions without damaging your natural lashes.',
-          detailedDescription:'Safe and gentle removal of eyelash extensions without damaging your natural lashes.',
-          juniorPrice: '$30- with ne $15 (15 min duration)',
-          duration: '15 min',
-          image: 'assets/images/hybrideyelashextensionServices.png',
           bookUrl: '/book/top-lip-wax',
           readUrl: '/services/top-lip-wax'
         }
