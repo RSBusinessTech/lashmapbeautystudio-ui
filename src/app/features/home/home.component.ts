@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       return 'waxing-services';
     case 'Eyelash Extensions':
       return 'eyelash-extensions';
-    case 'Hybrid Eyelash Extensions':
-      return 'hybrid-eyelash-extensions';
+    case 'Nail Services':
+      return 'nail-services';
     default:
       return '';
   }
