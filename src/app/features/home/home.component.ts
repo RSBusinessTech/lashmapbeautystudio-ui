@@ -39,5 +39,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
     default:
       return '';
   }
-}
+ }
 }
