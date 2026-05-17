@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { Location } from '@angular/common';
 import { SERVICE_CATEGORIES, ServiceCategory } from 'src/app/data/services-data';
+import { TrackBookingService } from 'src/app/services/track-booking.service';
 
 @Component({
   selector: 'app-services',
@@ -15,6 +16,7 @@ export class ServicesComponent implements AfterViewInit {
   expandedStates: { [key: string]: boolean } = {};
 
   constructor(
+    private trackBookingService: TrackBookingService,
     private location: Location,
     private route: ActivatedRoute,
     private viewport: ViewportScroller
@@ -65,5 +67,24 @@ export class ServicesComponent implements AfterViewInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+     bookAppointment() {
+    // Open Fresha immediately.
+    window.open(
+      'https://www.fresha.com/a/lashmap-beauty-studio-melbourne-level-10-1-elizabeth-st-jj0y3knw',
+      '_blank'
+    );
+
+    // Call backend API in background
+    this.trackBookingService.trackBooking()
+      .subscribe({
+        next: (response) => {
+          console.log('Tracking success', response);
+        },
+        error: (error) => {
+          console.error('Tracking failed', error);
+        }
+      });
   }
 }
