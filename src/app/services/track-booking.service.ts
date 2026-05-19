@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class TrackBookingService {
 
   //encode the email properly because @ in URL can sometimes create issues.
-  //  private ownerEmail = encodeURIComponent('lashmap.beautystudio@gmail.com');
-     private ownerEmail = encodeURIComponent('rohitsharma2605555@gmail.com');
+   private ownerEmail = encodeURIComponent('lashmap.beautystudio@gmail.com');
+    //  private ownerEmail = encodeURIComponent('rohitsharma2605555@gmail.com');
 
    // REST API URL
     private url = `https://rsbusinesstech-backend.onrender.com/booking/trackBooking/${this.ownerEmail}`;
