@@ -30,6 +30,5 @@ export class FooterComponent implements OnInit {
           console.error('Tracking failed', error);
         }
       });
-
   }
 }

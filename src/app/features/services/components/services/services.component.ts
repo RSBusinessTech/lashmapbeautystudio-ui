@@ -71,8 +71,13 @@ export class ServicesComponent implements AfterViewInit {
 
      bookAppointment() {
     // Open Fresha immediately.
+    // window.open(
+    //   'https://www.fresha.com/a/lashmap-beauty-studio-melbourne-level-10-1-elizabeth-st-jj0y3knw',
+    //   '_blank'
+    // );
+
     window.open(
-      'https://www.fresha.com/a/lashmap-beauty-studio-melbourne-level-10-1-elizabeth-st-jj0y3knw',
+      'https://www.fresha.com/a/lash-prettyup-melbourne-27-hardware-lane-mxsx2pcp',
       '_blank'
     );
 
